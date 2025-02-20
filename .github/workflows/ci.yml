@@ -39,8 +39,8 @@ jobs:
 
       - name: Install Allure CLI
         run: |
-          wget https://github.com/allure-framework/allure2/releases/download/2.16.1/allure-2.16.1.zip
-          unzip allure-2.16.1.zip -d allure
+          wget https://github.com/allure-framework/allure2/releases/download/2.32.2/allure-2.32.2.zip
+          unzip allure-2.32.2.zip -d allure
           sudo mv allure/allure /usr/local/bin
 
       - name: Generate Allure Report with CLI
