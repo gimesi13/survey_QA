@@ -37,11 +37,18 @@ jobs:
       - name: Build and Test with Maven
         run: mvn clean install
 
-      - name: Generate Allure Report
-        run: mvn allure:report
+      - name: Install Allure CLI
+        run: |
+          wget https://github.com/allure-framework/allure2/releases/download/2.16.1/allure-2.16.1.zip
+          unzip allure-2.16.1.zip -d allure
+          sudo mv allure/allure /usr/local/bin
 
-      - name: Upload Allure Report as Artifact
+      - name: Generate Allure Report with CLI
+        run: |
+          allure generate target/allure-results --clean -o target/allure-report
+
+      - name: Archive Allure Report HTML as Artifact
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
-          path: target/allure-report
+          path: target/allure-report/index.html
