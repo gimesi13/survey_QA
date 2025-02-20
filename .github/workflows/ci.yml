@@ -62,6 +62,7 @@ jobs:
           publish_dir: ./target/allure-report
           publish_branch: gh-pages
           keep_files: true
+          commit_message: "Deploy Allure report [skip ci]"
 
       - name: Comment with Report Link
         if: github.event_name == 'pull_request'
