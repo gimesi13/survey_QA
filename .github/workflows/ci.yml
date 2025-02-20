@@ -35,30 +35,8 @@ jobs:
       - name: Generate Allure Report
         run: mvn allure:report
 
-      - name: Upload Allure Report to GitHub Actions Artifact
-        uses: actions/upload-artifact@v1
+      - name: Upload Allure Report as Artifact
+        uses: actions/upload-artifact@v3
         with:
           name: allure-report
           path: target/allure-report
-
-  serve_report:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Download Allure Report from Artifacts
-        uses: actions/download-artifact@v2
-        with:
-          name: allure-report
-
-      - name: Start Allure Report Server
-        run: |
-          cd target/allure-report
-          python3 -m http.server 8080 &
-          sleep 10  # Wait for the server to start
-
-      - name: Post Report URL
-        run: |
-          echo "Allure Report URL: http://localhost:8080"
