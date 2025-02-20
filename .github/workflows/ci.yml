@@ -48,11 +48,14 @@ jobs:
 
       - name: Generate Allure Report with CLI
         run: |
-          ls -lah target/allure-results
-          allure generate target/allure-results --clean -o target/allure-report
+          ls -R target/allure-results
+          allure generate target/allure-results --clean -o target/allure-report --clean
+
+      - name: Debug - List Report Files
+        run: ls -R target/allure-report
 
       - name: Archive Allure Report HTML as Artifact
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
-          path: target/allure-report/index.html
+          path: target/allure-report/**
