@@ -55,6 +55,16 @@ jobs:
       - name: Prevent GitHub Pages Auto-Build
         run: echo "SKIP_GHPAGES=true" >> $GITHUB_ENV
 
+      # Cleanup Old Reports (Keep Last 10)
+      - name: Cleanup Old Reports (Keep Last 10)
+        run: |
+          git fetch --depth=1 origin allure-reports
+          git checkout allure-reports
+          ls -d */ | sort -r | tail -n +11 | xargs rm -rf
+          git add .
+          git commit -m "Cleanup old reports [skip ci]" || exit 0
+          git push origin allure-reports
+
       # Deploy Allure Report to GitHub Pages
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
