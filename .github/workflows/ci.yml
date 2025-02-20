@@ -54,8 +54,27 @@ jobs:
       - name: Debug - List Report Files
         run: ls -R target/allure-report
 
-      - name: Archive Allure Report HTML as Artifact
-        uses: actions/upload-artifact@v4
+      # Deploy Allure Report to GitHub Pages
+      - name: Deploy Allure Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          name: allure-report
-          path: target/allure-report/**
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target/allure-report
+          publish_branch: gh-pages
+          force_orphan: true
+
+      # Optional: Comment on the PR with the Allure report URL
+      - name: Comment with Report Link (Optional)
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const repo = context.repo;
+            const runId = context.runId;
+            const reportUrl = `https://${repo.owner}.github.io/${repo.repo}/`;
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: repo.owner,
+              repo: repo.repo,
+              body: `✅ **Allure Report:** [View Report](${reportUrl})`
+            });
