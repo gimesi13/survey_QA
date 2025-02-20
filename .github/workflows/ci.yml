@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -51,8 +52,8 @@ jobs:
           ls -R target/allure-results
           allure generate --single-file target/allure-results --clean -o target/allure-report/${{ github.run_id }} --clean
 
-      - name: Debug - List Report Files
-        run: ls -R target/allure-report
+      - name: Prevent GitHub Pages Auto-Build
+        run: echo "SKIP_GHPAGES=true" >> $GITHUB_ENV
 
       # Deploy Allure Report to GitHub Pages
       - name: Deploy Allure Report to GitHub Pages
