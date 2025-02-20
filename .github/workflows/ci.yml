@@ -58,7 +58,7 @@ jobs:
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_TOKEN }}
           publish_dir: ./target/allure-report
           publish_branch: gh-pages
           force_orphan: true
@@ -67,7 +67,7 @@ jobs:
       - name: Comment with Report Link (Optional)
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const repo = context.repo;
             const runId = context.runId;
