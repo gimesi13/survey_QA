@@ -63,18 +63,18 @@ jobs:
           publish_branch: gh-pages
           force_orphan: true
 
-      # Optional: Comment on the PR with the Allure report URL
       - name: Comment with Report Link (Optional)
+        if: github.event_name == 'pull_request'
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const repo = context.repo;
-            const runId = context.runId;
             const reportUrl = `https://${repo.owner}.github.io/${repo.repo}/`;
             github.rest.issues.createComment({
-              issue_number: context.issue.number,
+              issue_number: context.payload.pull_request.number,
               owner: repo.owner,
               repo: repo.repo,
               body: `✅ **Allure Report:** [View Report](${reportUrl})`
             });
+
