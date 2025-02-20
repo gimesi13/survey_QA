@@ -65,6 +65,15 @@ jobs:
           keep_files: true
           commit_message: "Deploy Allure report [skip ci]"
 
+      - name: Get Report URL
+        id: report_url
+        run: echo "url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.run_id }}/index.html" >> $GITHUB_ENV
+
+      - name: Add Report Link to Workflow Summary
+        run: |
+          echo "### ✅ Allure Report" >> $GITHUB_STEP_SUMMARY
+          echo "[📊 View Report](${{ env.url }})" >> $GITHUB_STEP_SUMMARY
+
       - name: Comment with Report Link
         if: github.event_name == 'pull_request'
         uses: actions/github-script@v7
@@ -72,11 +81,11 @@ jobs:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const repo = context.repo;
-             const runId = context.runId;
-            const reportUrl = `https://${repo.owner}.github.io/${repo.repo}/${runId}/index.html`;
-             github.rest.issues.createComment({
-            issue_number: context.issue.number,
-            owner: repo.owner,
-            repo: repo.repo,
-            body: `✅ **Allure Report for Run #${runId}:** [View Report](${reportUrl})`
-             });
+            const runId = context.runId;
+            const reportUrl = process.env.url;
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: repo.owner,
+              repo: repo.repo,
+              body: `✅ **Allure Report for Run #${runId}:** [View Report](${reportUrl})`
+            });
