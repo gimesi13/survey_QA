@@ -61,7 +61,7 @@ jobs:
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           publish_dir: ./target/allure-report
-          publish_branch: gh-pages
+          publish_branch: allure-reports
           keep_files: true
           commit_message: "Deploy Allure report [skip ci]"
 
