@@ -1,35 +1,27 @@
 package tests.integration;
 
 import api.AvailableMembersApi;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class AvailableMembersTest {
-
-    private static AvailableMembersApi availableMembersApi;
-
-    @BeforeAll
-    static void setup() {
-        availableMembersApi = new AvailableMembersApi();
-    }
+public class AvailableMembersTest extends AvailableMembersApi {
 
     @Test
     void testAvailableIds() {
-        availableMembersApi.validateAvailableMembers("id");
+        validateAvailableMembers("id");
     }
 
     @Test
     void testAvailableNames() {
-        availableMembersApi.validateAvailableMembers("name");
+        validateAvailableMembers("name");
     }
 
     @Test
     void testAvailableEmails() {
-        availableMembersApi.validateAvailableMembers("email");
+        validateAvailableMembers("email");
     }
 
     @Test
     void testAvailableStatuses() {
-        availableMembersApi.validateAvailableMembers("status");
+        validateAvailableMembers("status");
     }
 }
