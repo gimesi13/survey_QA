@@ -11,13 +11,14 @@ import utils.ApiCallHelper;
 import static org.hamcrest.Matchers.*;
 
 @ExtendWith(AllureJunit5.class)
+@Feature("Unit tests")
+@Story("Story annotation")
+@Tag("api")
+@Tag("unit")
+@Severity(SeverityLevel.NORMAL)
 @DisplayName("Unit - Available members")
 public class AvailableMembersUnitTest {
 
-    @Feature("Unit tests")
-    @Story("Story annotation")
-    @Tag("API")
-    @Severity(SeverityLevel.NORMAL)
     @Test
     @DisplayName("Verify member '1'")
     @Description("This test verifies that member 1 is available.")
