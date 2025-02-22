@@ -2,26 +2,22 @@ package tests.unit;
 
 import io.qameta.allure.*;
 import io.qameta.allure.junit5.AllureJunit5;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import utils.ApiCallHelper;
 
 import static org.hamcrest.Matchers.*;
 
 @ExtendWith(AllureJunit5.class)
-@Feature("Unit tests")
-@Story("Story annotation")
 @Tag("api")
 @Tag("unit")
 @Severity(SeverityLevel.NORMAL)
-@DisplayName("Unit - Available members")
+@DisplayName("Unit - Available Members")
 public class AvailableMembersUnitTest {
 
     @Test
-    @DisplayName("Verify member '1'")
-    @Description("This test verifies that member 1 is available.")
+    @DisplayName("Verify Member 1 is Available")
+    @Description("Verifies that member with ID 1 is available in the not-invited list for survey 1")
     void testAvailable1Unit() {
         ApiCallHelper.get("/surveys/1/members/not-invited").then()
                 .assertThat()
@@ -30,8 +26,8 @@ public class AvailableMembersUnitTest {
     }
 
     @Test
-    @DisplayName("Verify member '50'")
-    @Description("This test verifies that member 50 is available.")
+    @DisplayName("Verify Member 50 is Available")
+    @Description("Verifies that member with ID 50 is available in the not-invited list for survey 1")
     void testAvailable50Unit() {
         ApiCallHelper.get("/surveys/1/members/not-invited").then()
                 .assertThat()

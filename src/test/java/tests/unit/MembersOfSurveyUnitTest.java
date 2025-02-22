@@ -12,16 +12,12 @@ import static org.hamcrest.Matchers.*;
 @Tag("api")
 @Tag("unit")
 @Severity(SeverityLevel.NORMAL)
-@DisplayName("Unit Tests - Members of Survey")
-@Epic("Survey Management")
-@Feature("Member Management")
+@DisplayName("Unit - Members of Survey")
 public class MembersOfSurveyUnitTest {
 
     @Test
     @DisplayName("Verify Completed Survey '1'")
     @Description("Verifies that some members completed survey '1'")
-    @Story("Verify Completed Members")
-    @Severity(SeverityLevel.CRITICAL)
     void testMembersOfSurveyCompleted1Unit() {
         ApiCallHelper.get("/surveys/1/members?status=COMPLETED").then()
                 .assertThat()
@@ -32,8 +28,6 @@ public class MembersOfSurveyUnitTest {
     @Test
     @DisplayName("Verify Rejected Survey '1'")
     @Description("Verifies that some members were rejected from survey '1'")
-    @Story("Verify Rejected Members")
-    @Severity(SeverityLevel.CRITICAL)
     void testMembersOfSurveyRejected1Unit() {
         ApiCallHelper.get("/surveys/1/members?status=REJECTED").then()
                 .assertThat()
@@ -44,8 +38,6 @@ public class MembersOfSurveyUnitTest {
     @Test
     @DisplayName("Verify Not Asked Survey '1'")
     @Description("Verifies that no members were not asked for survey '1'")
-    @Story("Verify Not Asked Members")
-    @Severity(SeverityLevel.NORMAL)
     void testMembersOfSurveyNotAsked1Unit() {
         ApiCallHelper.get("/surveys/1/members?status=NOT_ASKED").then()
                 .assertThat()
@@ -55,8 +47,6 @@ public class MembersOfSurveyUnitTest {
     @Test
     @DisplayName("Verify Filtered Survey '1'")
     @Description("Verifies that some members were filtered in survey '1'")
-    @Story("Verify Filtered Members")
-    @Severity(SeverityLevel.NORMAL)
     void testMembersOfSurveyFiltered1Unit() {
         ApiCallHelper.get("/surveys/1/members?status=FILTERED").then()
                 .assertThat()

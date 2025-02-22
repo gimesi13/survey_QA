@@ -1,15 +1,23 @@
 package tests.unit;
 
-import org.junit.jupiter.api.Test;
+import io.qameta.allure.*;
+import io.qameta.allure.junit5.AllureJunit5;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 import utils.ApiCallHelper;
 
 import static org.hamcrest.Matchers.*;
 
+@ExtendWith(AllureJunit5.class)
+@Tag("api")
+@Tag("unit")
+@Severity(SeverityLevel.NORMAL)
+@DisplayName("Unit - Survey Statistics")
 public class SurveyStatisticsUnitTest {
 
-    //Tests are failing because we are trying to validate data based on CSVs (that don't match the actual response data)
-
     @Test
+    @DisplayName("Verify Statistics for Survey 1")
+    @Description("Verifies the statistics data for survey with ID 1")
     void testSurvey1Unit() {
         ApiCallHelper.get("/surveys/statistics").then()
                 .assertThat()
@@ -20,7 +28,10 @@ public class SurveyStatisticsUnitTest {
                 .body("[0].numberOfRejected", equalTo(4))
                 .body("[0].avgLengthOfSurvey", equalTo(13));
     }
+
     @Test
+    @DisplayName("Verify Statistics for Survey 100")
+    @Description("Verifies the statistics data for survey with ID 100")
     void testSurvey100Unit() {
         ApiCallHelper.get("/surveys/statistics").then()
                 .assertThat()

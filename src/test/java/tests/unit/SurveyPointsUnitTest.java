@@ -1,13 +1,23 @@
 package tests.unit;
 
-import org.junit.jupiter.api.Test;
+import io.qameta.allure.*;
+import io.qameta.allure.junit5.AllureJunit5;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 import utils.ApiCallHelper;
 
 import static org.hamcrest.Matchers.*;
 
+@ExtendWith(AllureJunit5.class)
+@Tag("api")
+@Tag("unit")
+@Severity(SeverityLevel.NORMAL)
+@DisplayName("Unit - Survey Points")
 public class SurveyPointsUnitTest {
 
     @Test
+    @DisplayName("Verify Points for Member 1")
+    @Description("Verifies the survey points data for member with ID 1")
     void testPoints1Unit() {
         ApiCallHelper.get("/members/1/points").then()
                 .assertThat()
@@ -26,6 +36,8 @@ public class SurveyPointsUnitTest {
     }
 
     @Test
+    @DisplayName("Verify Points for Member 300")
+    @Description("Verifies the survey points data for member with ID 300")
     void testPoints300Unit() {
         ApiCallHelper.get("/members/300/points").then()
                 .assertThat()
