@@ -9,6 +9,8 @@ import api.SurveyStatApi;
 @ExtendWith(AllureJunit5.class)
 @Tag("api")
 @Tag("integration")
+@Feature("API")
+@Story("Integration")
 @Severity(SeverityLevel.NORMAL)
 @DisplayName("Integration - Survey Statistics")
 public class SurveyStatisticsTest extends SurveyStatApi {

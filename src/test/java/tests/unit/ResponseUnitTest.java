@@ -9,6 +9,8 @@ import api.BaseApi;
 @ExtendWith(AllureJunit5.class)
 @Tag("api")
 @Tag("unit")
+@Feature("API")
+@Story("Unit")
 @Severity(SeverityLevel.NORMAL)
 @DisplayName("Unit - Basic Responses")
 public class ResponseUnitTest extends BaseApi {
