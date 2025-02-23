@@ -2,17 +2,15 @@ package utils;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
-
 import java.util.List;
-
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.hamcrest.Matchers.contains;
 
 public class AssertionHelper {
 
     public static void assertValues(String fieldName, List<Integer> expected, List<Integer> actual) {
         try {
-            assertThat("Mismatch in " + fieldName, actual, containsInAnyOrder(expected.toArray()));
+            assertThat("Mismatch in " + fieldName, actual, contains(expected.toArray()));
         } catch (AssertionError e) {
             logAssertionError(fieldName, expected, actual, e);
             throw e;
