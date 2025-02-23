@@ -1,9 +1,8 @@
 package api;
 
+import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import org.apache.commons.csv.CSVRecord;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import utils.ApiCallHelper;
 import utils.AssertionHelper;
 import utils.CsvHelper;
@@ -16,48 +15,39 @@ import java.util.stream.Collectors;
 
 public class SurveyStatApi extends BaseApi {
 
-    private static final Logger logger = LoggerFactory.getLogger(SurveyStatApi.class);
     private static final String PARTICIPATION_CSV_PATH = "src/test/java/resources/csv/Participation.csv";
 
-    // Validate survey statistics by comparing the actual API response with expected values
+    @Step("Validate survey statistic for field: {fieldName}")
     public void testSurveyStatistic(String fieldName) {
-        String jsonPathKey = "";
-        switch (fieldName) {
-            case "Survey Id":
-                jsonPathKey = "surveyId";
-                break;
-            case "Number of Completes":
-                jsonPathKey = "numberOfCompletes";
-                break;
-            case "Number of Filtered":
-                jsonPathKey = "numberOfFiltered";
-                break;
-            case "Number of Rejected":
-                jsonPathKey = "numberOfRejected";
-                break;
-            case "Average Length":
-                jsonPathKey = "avgLengthOfSurvey";
-                break;
-            default:
-                throw new IllegalArgumentException("Unknown field name: " + fieldName);
-        }
-        logger.info("Starting validation for survey statistic: {}", fieldName);
+        String jsonPathKey = getJsonPathKey(fieldName);
         List<CSVRecord> participationRecords = CsvHelper.readCsv(PARTICIPATION_CSV_PATH);
         Response response = ApiCallHelper.get("/surveys/statistics");
 
-        // Calculate expected statistics based on participation records
         List<SurveyStatistics> expectedStatistics = calculateExpectedStatistics(participationRecords);
-
-        // Extract actual and expected values for comparison
         List<Integer> actualValues = response.jsonPath().getList(jsonPathKey, Integer.class);
         List<Integer> expectedValues = getSurveyStatistic(expectedStatistics, fieldName);
 
-        // Validate values
         AssertionHelper.assertValues(fieldName, expectedValues, actualValues);
-        logger.info("Validation completed for survey statistic: {}", fieldName);
     }
 
-    // Calculates expected survey statistics from participation records
+    private String getJsonPathKey(String fieldName) {
+        switch (fieldName) {
+            case "Survey Id":
+                return "surveyId";
+            case "Number of Completes":
+                return "numberOfCompletes";
+            case "Number of Filtered":
+                return "numberOfFiltered";
+            case "Number of Rejected":
+                return "numberOfRejected";
+            case "Average Length":
+                return "avgLengthOfSurvey";
+            default:
+                throw new IllegalArgumentException("Unknown field name: " + fieldName);
+        }
+    }
+
+    @Step("Calculate expected statistics from participation records")
     private List<SurveyStatistics> calculateExpectedStatistics(List<CSVRecord> records) {
         Map<Integer, SurveyStatistics> statisticsMap = new HashMap<>();
 
@@ -69,20 +59,17 @@ public class SurveyStatApi extends BaseApi {
                         ? Integer.parseInt(record.get("Length"))
                         : 0;
 
-                // Update statistics for the survey
                 statisticsMap.computeIfAbsent(surveyId, k -> new SurveyStatistics(surveyId))
                         .update(status, length);
             } catch (NumberFormatException e) {
-                logger.error("Error processing record: {}", record, e);
                 throw new RuntimeException("Error processing record: " + record, e);
             }
         }
 
-        logger.debug("Calculated statistics for {} unique surveys.", statisticsMap.size());
         return new ArrayList<>(statisticsMap.values());
     }
 
-    // Extract a specific field from the list of SurveyStatistics
+    @Step("Extract {fieldName} from survey statistics")
     private List<Integer> getSurveyStatistic(List<SurveyStatistics> statistics, String fieldName) {
         return statistics.stream()
                 .map(statistic -> {
@@ -98,14 +85,12 @@ public class SurveyStatApi extends BaseApi {
                         case "Average Length":
                             return statistic.getAvgLengthOfSurvey();
                         default:
-                            logger.error("Unknown field: {}", fieldName);
                             throw new IllegalArgumentException("Unknown field: " + fieldName);
                     }
                 })
                 .collect(Collectors.toList());
     }
 
-    // Represents survey statistics for a single survey.
     private static class SurveyStatistics {
         private final int surveyId;
         private int numberOfCompletes;
@@ -118,7 +103,6 @@ public class SurveyStatApi extends BaseApi {
             this.surveyId = surveyId;
         }
 
-        // Update the statistics based on a record's status and survey length.
         public void update(String status, int length) {
             switch (status) {
                 case "4":
@@ -135,7 +119,6 @@ public class SurveyStatApi extends BaseApi {
                 case "1":
                     break;
                 default:
-                    logger.error("Unknown status: {}", status);
                     throw new IllegalArgumentException("Unknown status: " + status);
             }
         }
