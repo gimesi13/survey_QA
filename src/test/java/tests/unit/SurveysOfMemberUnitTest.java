@@ -12,8 +12,9 @@ import static org.hamcrest.Matchers.*;
 @ExtendWith(AllureJunit5.class)
 @Tag("api")
 @Tag("unit")
-@Feature("API")
-@Story("Unit")
+@Epic("API")
+@Feature("Unit")
+@Story("Story annotation (Unit - Surveys of Member)")
 @Severity(SeverityLevel.NORMAL)
 @DisplayName("Unit - Surveys of Member")
 public class SurveysOfMemberUnitTest {
