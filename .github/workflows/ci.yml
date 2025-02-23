@@ -8,6 +8,11 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Test Tag (e.g., api, e2e, integration)'
+        required: false
+        default: ''
 
 jobs:
   build:
@@ -36,7 +41,12 @@ jobs:
           nohup java -jar dynata-surveys-0.0.1-SNAPSHOT.jar > server.log 2>&1 &
 
       - name: Build and Test with Maven
-        run: mvn clean install
+        run: |
+          if [[ -n "${{ github.event.inputs.tag }}" ]]; then
+            mvn clean install -Dgroups=${{ github.event.inputs.tag }}
+          else
+            mvn clean install
+          fi
 
       - name: Install Allure CLI
         run: |
