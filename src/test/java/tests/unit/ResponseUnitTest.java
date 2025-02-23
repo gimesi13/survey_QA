@@ -7,11 +7,10 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import api.BaseApi;
 
 @ExtendWith(AllureJunit5.class)
-@Tag("api")
 @Tag("unit")
-@Epic("API")
+@Epic("API Tests")
 @Feature("Unit")
-@Story("Story annotation (Unit - Basic Responses)")
+@Story("Basic Responses")
 @Severity(SeverityLevel.NORMAL)
 @DisplayName("Unit - Basic Responses")
 public class ResponseUnitTest extends BaseApi {

@@ -7,8 +7,10 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith(AllureJunit5.class)
-@Tag("api")
 @Tag("integration")
+@Epic("API Tests")
+@Feature("Integration")
+@Story("Available Members")
 @Severity(SeverityLevel.NORMAL)
 @DisplayName("Integration - Available Members")
 public class AvailableMembersTest extends AvailableMembersApi {

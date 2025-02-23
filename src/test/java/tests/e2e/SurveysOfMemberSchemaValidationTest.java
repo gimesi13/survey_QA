@@ -8,8 +8,10 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import utils.ApiCallHelper;
 
 @ExtendWith(AllureJunit5.class)
-@Tag("api")
 @Tag("e2e")
+@Epic("API Tests")
+@Feature("E2E")
+@Story("Surveys of Member Schema Validation")
 @Severity(SeverityLevel.CRITICAL)
 @DisplayName("E2E - Surveys of Member Schema Validation")
 public class SurveysOfMemberSchemaValidationTest {

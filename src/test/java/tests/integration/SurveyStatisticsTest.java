@@ -7,11 +7,10 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import api.SurveyStatApi;
 
 @ExtendWith(AllureJunit5.class)
-@Tag("api")
 @Tag("integration")
-@Epic("API epic")
-@Feature("Integration feature")
-@Story("Story annotation (Integration - Survey Statistics)")
+@Epic("API Tests")
+@Feature("Integration")
+@Story("Survey Statistics")
 @Severity(SeverityLevel.NORMAL)
 @DisplayName("Integration - Survey Statistics")
 public class SurveyStatisticsTest extends SurveyStatApi {

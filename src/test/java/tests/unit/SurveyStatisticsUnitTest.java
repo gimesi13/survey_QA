@@ -10,11 +10,10 @@ import io.restassured.response.Response;
 import static org.hamcrest.Matchers.*;
 
 @ExtendWith(AllureJunit5.class)
-@Tag("api")
 @Tag("unit")
-@Epic("API")
+@Epic("API Tests")
 @Feature("Unit")
-@Story("Story annotation (Unit - Survey Statistics)")
+@Story("Survey Statistics)")
 @Severity(SeverityLevel.NORMAL)
 @DisplayName("Unit - Survey Statistics")
 public class SurveyStatisticsUnitTest {
