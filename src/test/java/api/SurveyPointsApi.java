@@ -17,8 +17,28 @@ public class SurveyPointsApi extends BaseApi {
     private static final String SURVEYS_CSV_PATH = "src/test/java/resources/csv/Surveys.csv";
     private static final String PARTICIPATION_CSV_PATH = "src/test/java/resources/csv/Participation.csv";
 
-    public void testSurveyPoints(String csvFieldName, String jsonPathKey) {
+    public void testSurveyPoints(String csvFieldName) {
         logger.info("Starting validation for status: {}", csvFieldName);
+        String jsonPathKey = "";
+        switch (csvFieldName) {
+            case "Survey Id":
+                jsonPathKey = "id";
+                break;
+            case "Name":
+                jsonPathKey = "name";
+                break;
+            case "Expected completes":
+                jsonPathKey = "expectedCompletes";
+                break;
+            case "Completion points":
+                jsonPathKey = "completionPoints";
+                break;
+            case "Filtered points":
+                jsonPathKey = "filteredPoints";
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown CSV field name: " + csvFieldName);
+        }
 
         List<CSVRecord> surveyRecords = CsvHelper.readCsv(SURVEYS_CSV_PATH);
 
