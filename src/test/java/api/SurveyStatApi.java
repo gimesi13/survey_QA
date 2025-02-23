@@ -20,7 +20,27 @@ public class SurveyStatApi extends BaseApi {
     private static final String PARTICIPATION_CSV_PATH = "src/test/java/resources/csv/Participation.csv";
 
     // Validate survey statistics by comparing the actual API response with expected values
-    public void testSurveyStatistic(String fieldName, String jsonPathKey) {
+    public void testSurveyStatistic(String fieldName) {
+        String jsonPathKey = "";
+        switch (fieldName) {
+            case "Survey Id":
+                jsonPathKey = "surveyId";
+                break;
+            case "Number of Completes":
+                jsonPathKey = "numberOfCompletes";
+                break;
+            case "Number of Filtered":
+                jsonPathKey = "numberOfFiltered";
+                break;
+            case "Number of Rejected":
+                jsonPathKey = "numberOfRejected";
+                break;
+            case "Average Length":
+                jsonPathKey = "avgLengthOfSurvey";
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown field name: " + fieldName);
+        }
         logger.info("Starting validation for survey statistic: {}", fieldName);
         List<CSVRecord> participationRecords = CsvHelper.readCsv(PARTICIPATION_CSV_PATH);
         Response response = ApiCallHelper.get("/surveys/statistics");

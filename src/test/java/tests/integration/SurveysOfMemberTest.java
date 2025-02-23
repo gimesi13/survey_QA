@@ -1,19 +1,22 @@
 package tests.integration;
 
+import io.qameta.allure.*;
+import io.qameta.allure.junit5.AllureJunit5;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 import api.SurveysOfMemberApi;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 
-public class SurveysOfMemberTest {
-    private static SurveysOfMemberApi surveysOfMemberApi;
-
-    @BeforeAll
-    static void setup() {
-        surveysOfMemberApi = new SurveysOfMemberApi();
-    }
+@ExtendWith(AllureJunit5.class)
+@Tag("api")
+@Tag("integration")
+@Severity(SeverityLevel.NORMAL)
+@DisplayName("Integration - Surveys of Member")
+public class SurveysOfMemberTest extends SurveysOfMemberApi {
 
     @Test
-    void validateMemberSurveyData() {
-        surveysOfMemberApi.validateMemberSurveyData();
+    @DisplayName("Validate Member Survey Data")
+    @Description("Verifies the survey data for a specific member")
+    void testValidateMemberSurveyData() {
+        validateMemberSurveyData();
     }
 }

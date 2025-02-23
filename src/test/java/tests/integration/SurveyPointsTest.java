@@ -1,46 +1,57 @@
 package tests.integration;
 
+import io.qameta.allure.*;
+import io.qameta.allure.junit5.AllureJunit5;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 import api.SurveyPointsApi;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-
-public class SurveyPointsTest {
-
-    private static SurveyPointsApi surveyPointsApi;
-
-    @BeforeAll
-    static void setup() {
-        surveyPointsApi = new SurveyPointsApi();
-    }
+@ExtendWith(AllureJunit5.class)
+@Tag("api")
+@Tag("integration")
+@Severity(SeverityLevel.NORMAL)
+@DisplayName("Integration - Survey Points")
+public class SurveyPointsTest extends SurveyPointsApi {
 
     @Test
+    @DisplayName("Verify Survey IDs")
+    @Description("Verifies the survey IDs in the survey points response")
     void testSurveyIds() {
-        surveyPointsApi.testSurveyPoints("Survey Id", "id");
+        testSurveyPoints("Survey Id");
     }
 
     @Test
+    @DisplayName("Verify Survey Names")
+    @Description("Verifies the survey names in the survey points response")
     void testSurveyNames() {
-        surveyPointsApi.testSurveyPoints("Name", "name");
+        testSurveyPoints("Name");
     }
 
     @Test
+    @DisplayName("Verify Survey Expected Completes")
+    @Description("Verifies the expected completes in the survey points response")
     void testSurveyExpectedCompletes() {
-        surveyPointsApi.testSurveyPoints("Expected completes", "expectedCompletes");
+        testSurveyPoints("Expected completes");
     }
 
     @Test
+    @DisplayName("Verify Survey Completion Points")
+    @Description("Verifies the completion points in the survey points response")
     void testSurveyCompletionPoints() {
-        surveyPointsApi.testSurveyPoints("Completion points", "completionPoints");
+        testSurveyPoints("Completion points");
     }
 
     @Test
+    @DisplayName("Verify Survey Filtered Points")
+    @Description("Verifies the filtered points in the survey points response")
     void testSurveyFilteredPoints() {
-        surveyPointsApi.testSurveyPoints("Filtered points", "filteredPoints");
+        testSurveyPoints("Filtered points");
     }
 
     @Test
+    @DisplayName("Validate Survey Points")
+    @Description("Validates the points data in the survey points response")
     void testSurveyPointsValidation() {
-        surveyPointsApi.validatePoints();
+        validatePoints();
     }
 }

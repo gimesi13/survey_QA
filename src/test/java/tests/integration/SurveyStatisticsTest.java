@@ -1,40 +1,50 @@
 package tests.integration;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import io.qameta.allure.*;
+import io.qameta.allure.junit5.AllureJunit5;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 import api.SurveyStatApi;
 
-class SurveyStatisticsTest {
-
-    private static SurveyStatApi surveyStatApi;
-
-    @BeforeAll
-    static void setup() {
-        surveyStatApi = new SurveyStatApi();
-    }
+@ExtendWith(AllureJunit5.class)
+@Tag("api")
+@Tag("integration")
+@Severity(SeverityLevel.NORMAL)
+@DisplayName("Integration - Survey Statistics")
+public class SurveyStatisticsTest extends SurveyStatApi {
 
     @Test
+    @DisplayName("Verify Survey IDs")
+    @Description("Verifies the survey IDs in the survey statistics response")
     void testSurveyIds() {
-        surveyStatApi.testSurveyStatistic("Survey Id", "surveyId");
+        testSurveyStatistic("Survey Id");
     }
 
     @Test
+    @DisplayName("Verify Number of Completes")
+    @Description("Verifies the number of completes in the survey statistics response")
     void testNumberOfCompletes() {
-        surveyStatApi.testSurveyStatistic("Number of Completes", "numberOfCompletes");
+        testSurveyStatistic("Number of Completes");
     }
 
     @Test
+    @DisplayName("Verify Number of Filtered")
+    @Description("Verifies the number of filtered responses in the survey statistics response")
     void testNumberOfFiltered() {
-        surveyStatApi.testSurveyStatistic("Number of Filtered", "numberOfFiltered");
+        testSurveyStatistic("Number of Filtered");
     }
 
     @Test
+    @DisplayName("Verify Number of Rejected")
+    @Description("Verifies the number of rejected responses in the survey statistics response")
     void testNumberOfRejected() {
-        surveyStatApi.testSurveyStatistic("Number of Rejected", "numberOfRejected");
+        testSurveyStatistic("Number of Rejected");
     }
 
     @Test
+    @DisplayName("Verify Average Length of Survey")
+    @Description("Verifies the average length of the survey in the survey statistics response")
     void testAverageLength() {
-        surveyStatApi.testSurveyStatistic("Average Length", "avgLengthOfSurvey");
+        testSurveyStatistic("Average Length");
     }
 }
