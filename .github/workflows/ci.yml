@@ -48,6 +48,11 @@ jobs:
             mvn clean install
           fi
 
+      # 🏎️ Run Gatling Performance Tests
+      - name: Run Performance Tests
+        run: mvn gatling:test
+
+      # 🎭 Install Allure CLI
       - name: Install Allure CLI
         run: |
           wget https://github.com/allure-framework/allure2/releases/download/2.32.2/allure-2.32.2.zip
@@ -57,44 +62,61 @@ jobs:
           chmod +x /opt/allure/bin/allure
           allure --version
 
+      # 📊 Generate Allure Report
       - name: Generate Allure Report with CLI
         run: |
           ls -R target/allure-results
           allure generate --single-file target/allure-results --clean -o target/allure-report/${{ github.run_id }} --clean
 
+      # 📉 Move Gatling Report to Target Directory
+      - name: Move Gatling Report for Deployment
+        run: |
+          mkdir -p target/gatling-report/${{ github.run_id }}
+          cp -r target/gatling/* target/gatling-report/${{ github.run_id }}
+
+      # 🧹 Prevent GitHub Pages Auto-Build
       - name: Prevent GitHub Pages Auto-Build
         run: echo "SKIP_GHPAGES=true" >> $GITHUB_ENV
 
-      # Cleanup Old Reports (Keep Last 10)
+      # 🧹 Cleanup Old Reports (Keep Last 10)
       - name: Cleanup Old Reports (Keep Last 10)
         run: |
-          git fetch --depth=1 origin allure-reports
-          git checkout allure-reports
+          git fetch --depth=1 origin reports
+          git checkout reports
           ls -d */ | sort -r | tail -n +11 | xargs rm -rf
           git add .
           git commit -m "Cleanup old reports [skip ci]" || exit 0
-          git push origin allure-reports
+          git push origin reports
 
-      # Deploy Allure Report to GitHub Pages
-      - name: Deploy Allure Report to GitHub Pages
+      # 🚀 Deploy Allure & Gatling Reports to GitHub Pages
+      - name: Deploy Reports to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: ./target/allure-report
-          publish_branch: allure-reports
+          publish_dir: ./target
+          publish_branch: reports
           keep_files: true
-          commit_message: "Deploy Allure report [skip ci]"
+          commit_message: "Deploy Test Reports [skip ci]"
 
-      - name: Get Report URL
-        id: report_url
-        run: echo "url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.run_id }}/index.html" >> $GITHUB_ENV
+      # 🔗 Get Allure Report URL
+      - name: Get Allure Report URL
+        id: allure_report_url
+        run: echo "allure_url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.run_id }}/allure-report/index.html" >> $GITHUB_ENV
 
-      - name: Add Report Link to Workflow Summary
+      # 🔗 Get Gatling Report URL
+      - name: Get Gatling Report URL
+        id: gatling_report_url
+        run: echo "gatling_url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.run_id }}/gatling-report/index.html" >> $GITHUB_ENV
+
+      # 📌 Add Report Links to Workflow Summary
+      - name: Add Report Links to Summary
         run: |
-          echo "### ✅ Allure Report" >> $GITHUB_STEP_SUMMARY
-          echo "[📊 View Report](${{ env.url }})" >> $GITHUB_STEP_SUMMARY
+          echo "### ✅ Test Reports" >> $GITHUB_STEP_SUMMARY
+          echo "[📊 Allure Report](${{ env.allure_url }})" >> $GITHUB_STEP_SUMMARY
+          echo "[🚀 Gatling Performance Report](${{ env.gatling_url }})" >> $GITHUB_STEP_SUMMARY
 
-      - name: Comment with Report Link
+      # 📝 Comment with Report Links on PR
+      - name: Comment with Report Links
         if: github.event_name == 'pull_request'
         uses: actions/github-script@v7
         with:
@@ -102,10 +124,11 @@ jobs:
           script: |
             const repo = context.repo;
             const runId = context.runId;
-            const reportUrl = process.env.url;
+            const allureReportUrl = process.env.allure_url;
+            const gatlingReportUrl = process.env.gatling_url;
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: repo.owner,
               repo: repo.repo,
-              body: `✅ **Allure Report for Run #${runId}:** [View Report](${reportUrl})`
+              body: `✅ **Test Reports for Run #${runId}:**\n\n📊 **[Allure Report](${allureReportUrl})**\n🚀 **[Gatling Performance Report](${gatlingReportUrl})**`
             });
