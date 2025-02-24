@@ -77,7 +77,9 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: ./target/allure-report
+#          publish_dir: ./target/allure-report
+          publish_dir: ${{ env.REPORT_DIR }}
+          destination_dir: allure-reports/${{ env.RUN_ID }}
           publish_branch: allure-reports
           keep_files: true
           commit_message: "Deploy Allure report [skip ci]"
