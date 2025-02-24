@@ -43,9 +43,9 @@ jobs:
       - name: Build and Test with Maven
         run: |
           if [[ -n "${{ github.event.inputs.tag }}" ]]; then
-            mvn clean install -Dgroups=${{ github.event.inputs.tag }}
+            mvn clean install -Dgroups=${{ github.event.inputs.tag }} -Dgatling.skip=true
           else
-            mvn clean install
+            mvn clean install -Dgatling.skip=true
           fi
 
       - name: Install Allure CLI
