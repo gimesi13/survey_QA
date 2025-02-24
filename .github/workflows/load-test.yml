@@ -37,9 +37,14 @@ jobs:
 
       - name: Move Latest Gatling Report to Fixed Directory
         run: |
+          REPORT_DIR=$(ls -d target/gatling/loadtest-* 2>/dev/null | tail -n 1)
+          if [ -z "$REPORT_DIR" ]; then
+            echo "❌ No Gatling report found!" >&2
+            exit 1
+          fi
           mkdir -p target/gatling/latest
-          REPORT_DIR=$(ls -d target/gatling/loadtest-* | tail -n 1)
-          mv "$REPORT_DIR"/* target/gatling/latest/
+          cp -r "$REPORT_DIR"/* target/gatling/latest/
+          ls -R target/gatling/latest  # Debugging: Confirm files are copied
 
       - name: Upload Gatling Report Artifact
         uses: actions/upload-artifact@v4
