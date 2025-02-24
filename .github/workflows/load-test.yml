@@ -41,44 +41,40 @@ jobs:
           name: Gatling Report
           path: target/gatling/**/index.html
 
+      - name: Find Latest Gatling Report Directory
+        id: report_dir
+        run: echo "REPORT_PATH=$(ls -d target/gatling/loadtest-* | tail -n 1 | xargs basename)" >> $GITHUB_ENV
+
       - name: Deploy Gatling Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: ./target/gatling/${{ github.run_id }}
+          publish_dir: ./target/gatling/${{ env.REPORT_PATH }}
           publish_branch: loadtest-reports
           keep_files: true
           commit_message: "Deploy Gatling Load Test Report [skip ci]"
 
       - name: Get Load Test Report URL
-        id: loadtest_report_url
-        run: echo "url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.run_id }}/index.html" >> $GITHUB_ENV
+        run: echo "url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ env.REPORT_PATH }}/index.html" >> $GITHUB_ENV
 
       - name: Add Load Test Report Link to Workflow Summary
         run: |
           echo "### 🚀 Gatling Load Test Report" >> $GITHUB_STEP_SUMMARY
           echo "[📊 View Report](${{ env.url }})" >> $GITHUB_STEP_SUMMARY
 
-      - name: Comment with Load Test Report Link
-        if: github.event_name == 'workflow_dispatch'
+      - name: Comment with Load Test Report Link (only for PRs)
+        if: github.event_name == 'pull_request'
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const repo = context.repo;
-            const issueNumber = context.issue.number; // This is missing
             const runId = context.runId;
             const reportUrl = process.env.url;
 
-            if (!issueNumber) {
-              console.log("No issue or pull request found. Skipping comment.");
-              return;
-            }
-
             github.rest.issues.createComment({
-              issue_number: issueNumber,
+              issue_number: context.payload.pull_request.number,
               owner: repo.owner,
               repo: repo.repo,
               body: `🚀 **Gatling Load Test Report for Run #${runId}:** [View Report](${reportUrl})`
             });
-
