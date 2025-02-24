@@ -32,15 +32,17 @@ jobs:
       - name: Run Gatling Load Test
         run: mvn gatling:test -Dgatling.simulationClass=tests.performance.LoadTest -Dgatling.skip=false
 
-      # Cleanup Old Gatling Reports (Keep Last 10)
+        # Cleanup Old Gatling Reports (Keep Last 10)
       - name: Cleanup Old Reports (Keep Last 10)
         run: |
-          git fetch --depth=1 origin loadtest-reports
-          git checkout loadtest-reports
+          git fetch --depth=1 origin allure-reports
+          git checkout allure-reports
+          mkdir -p loadtest-reports
+          cd loadtest-reports
           ls -d */ | sort -r | tail -n +11 | xargs rm -rf
           git add .
-          git commit -m "Cleanup old reports [skip ci]" || exit 0
-          git push origin loadtest-reports
+          git commit -m "Cleanup old Gatling reports [skip ci]" || exit 0
+          git push origin allure-reports
 
       # Verify Gatling Report Exists
       - name: Verify Gatling Report Exists
@@ -54,30 +56,24 @@ jobs:
             echo "❌ No Gatling report found!" >&2
             exit 1
           fi
+          RUN_ID=$(date +'%Y%m%d%H%M%S')
           echo "REPORT_DIR=$REPORT_DIR" >> $GITHUB_ENV
-          echo "REPORT_FOLDER=$(basename $REPORT_DIR)" >> $GITHUB_ENV
+          echo "RUN_ID=$RUN_ID" >> $GITHUB_ENV
 
-      # Upload Gatling Report Artifact
-      - name: Upload Gatling Report Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: Gatling Report
-          path: ${{ env.REPORT_DIR }}/index.html
-
-      # Deploy Gatling Report to GitHub Pages
+      # Deploy Gatling Report to GitHub Pages (Inside loadtest-reports/<run-id>/)
       - name: Deploy Gatling Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           publish_dir: ${{ env.REPORT_DIR }}
+          destination_dir: loadtest-reports/${{ env.RUN_ID }}
           publish_branch: allure-reports
           keep_files: true
           commit_message: "Deploy Gatling Load Test Report [skip ci]"
 
       # Get Load Test Report URL
       - name: Get Load Test Report URL
-        id: report_url
-        run: echo "url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ env.REPORT_FOLDER }}/index.html" >> $GITHUB_ENV
+        run: echo "url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/loadtest-reports/${{ env.RUN_ID }}/index.html" >> $GITHUB_ENV
 
       - name: Add Load Test Report Link to Workflow Summary
         run: |
