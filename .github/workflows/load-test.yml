@@ -32,17 +32,28 @@ jobs:
       - name: Run Gatling Load Test
         run: mvn gatling:test -Dgatling.simulationClass=tests.performance.LoadTest -Dgatling.skip=false
 
-        # Cleanup Old Gatling Reports (Keep Last 10)
+      # Cleanup Old Gatling Reports (Keep Last 10)
       - name: Cleanup Old Reports (Keep Last 10)
         run: |
           git fetch --depth=1 origin allure-reports
           git checkout allure-reports
+
+        # Ensure the loadtest-reports directory exists
           mkdir -p loadtest-reports
           cd loadtest-reports
-          ls -d */ | sort -r | tail -n +11 | xargs rm -rf
+
+        # Remove old reports, but only if there are more than 10
+          if [ $(ls -d */ 2>/dev/null | wc -l) -gt 10 ]; then
+            ls -d */ | sort -r | tail -n +11 | xargs rm -rf
+          else
+            echo "✅ Less than 10 reports exist, skipping cleanup."
+          fi
+
+          cd ..
           git add .
           git commit -m "Cleanup old Gatling reports [skip ci]" || exit 0
           git push origin allure-reports
+
 
       # Verify Gatling Report Exists
       - name: Verify Gatling Report Exists
