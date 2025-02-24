@@ -16,18 +16,18 @@ stats: {
         "ko": "        -"
     },
     "maxResponseTime": {
-        "total": "      190",
-        "ok": "      190",
+        "total": "      206",
+        "ok": "      206",
         "ko": "        -"
     },
     "meanResponseTime": {
-        "total": "        2",
-        "ok": "        2",
+        "total": "        1",
+        "ok": "        1",
         "ko": "        -"
     },
     "standardDeviation": {
-        "total": "        4",
-        "ok": "        4",
+        "total": "        5",
+        "ok": "        5",
         "ko": "        -"
     },
     "percentiles1": {
@@ -36,13 +36,13 @@ stats: {
         "ko": "        -"
     },
     "percentiles2": {
-        "total": "        2",
-        "ok": "        2",
+        "total": "        1",
+        "ok": "        1",
         "ko": "        -"
     },
     "percentiles3": {
-        "total": "        3",
-        "ok": "        3",
+        "total": "        2",
+        "ok": "        2",
         "ko": "        -"
     },
     "percentiles4": {
@@ -99,18 +99,18 @@ stats: {
         "ko": "        -"
     },
     "maxResponseTime": {
-        "total": "      190",
-        "ok": "      190",
+        "total": "      206",
+        "ok": "      206",
         "ko": "        -"
     },
     "meanResponseTime": {
-        "total": "        2",
-        "ok": "        2",
+        "total": "        1",
+        "ok": "        1",
         "ko": "        -"
     },
     "standardDeviation": {
-        "total": "        4",
-        "ok": "        4",
+        "total": "        5",
+        "ok": "        5",
         "ko": "        -"
     },
     "percentiles1": {
@@ -119,13 +119,13 @@ stats: {
         "ko": "        -"
     },
     "percentiles2": {
-        "total": "        2",
-        "ok": "        2",
+        "total": "        1",
+        "ok": "        1",
         "ko": "        -"
     },
     "percentiles3": {
-        "total": "        3",
-        "ok": "        3",
+        "total": "        2",
+        "ok": "        2",
         "ko": "        -"
     },
     "percentiles4": {
