@@ -34,6 +34,7 @@ jobs:
 
       - name: Upload Gatling Report Artifact
         uses: actions/upload-artifact@v4
+
         with:
           name: Gatling Report
           path: target/gatling/**/index.html
@@ -55,4 +56,3 @@ jobs:
         run: |
           echo "### 🚀 Gatling Load Test Report" >> $GITHUB_STEP_SUMMARY
           echo "[📊 View Report](${{ env.url }})" >> $GITHUB_STEP_SUMMARY
-
