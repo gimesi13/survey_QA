@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: tests.e2e.PointsSchemaValidationTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.347 s -- in tests.e2e.PointsSchemaValidationTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.535 s -- in tests.e2e.PointsSchemaValidationTest

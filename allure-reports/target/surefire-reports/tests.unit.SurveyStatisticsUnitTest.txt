@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: tests.unit.SurveyStatisticsUnitTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.288 s <<< FAILURE! -- in tests.unit.SurveyStatisticsUnitTest
-tests.unit.SurveyStatisticsUnitTest.testSurvey1Unit -- Time elapsed: 0.175 s <<< FAILURE!
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.278 s <<< FAILURE! -- in tests.unit.SurveyStatisticsUnitTest
+tests.unit.SurveyStatisticsUnitTest.testSurvey1Unit -- Time elapsed: 0.148 s <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 JSON path [0].numberOfCompletes doesn't match.
@@ -111,7 +111,7 @@ Expected: <21>
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.unit.SurveyStatisticsUnitTest.testSurvey100Unit -- Time elapsed: 0.102 s <<< FAILURE!
+tests.unit.SurveyStatisticsUnitTest.testSurvey100Unit -- Time elapsed: 0.097 s <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 JSON path [99].numberOfCompletes doesn't match.

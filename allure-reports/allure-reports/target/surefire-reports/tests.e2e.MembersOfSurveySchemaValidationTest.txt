@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: tests.e2e.MembersOfSurveySchemaValidationTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.720 s -- in tests.e2e.MembersOfSurveySchemaValidationTest
