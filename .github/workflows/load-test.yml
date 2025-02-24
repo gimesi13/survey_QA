@@ -56,8 +56,8 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: ${{ github.workspace }}/target/gatling/latest
-          publish_branch: loadtest-reports
+          publish_dir: ./target/gatling/latest
+          publish_branch: allure-reports
           keep_files: true
           commit_message: "Deploy Gatling Load Test Report [skip ci]"
 
