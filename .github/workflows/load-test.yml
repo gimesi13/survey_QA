@@ -66,11 +66,19 @@ jobs:
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const repo = context.repo;
+            const issueNumber = context.issue.number; // This is missing
             const runId = context.runId;
             const reportUrl = process.env.url;
+
+            if (!issueNumber) {
+              console.log("No issue or pull request found. Skipping comment.");
+              return;
+            }
+
             github.rest.issues.createComment({
-              issue_number: context.issue.number,
+              issue_number: issueNumber,
               owner: repo.owner,
               repo: repo.repo,
               body: `🚀 **Gatling Load Test Report for Run #${runId}:** [View Report](${reportUrl})`
             });
+
