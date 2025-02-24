@@ -72,8 +72,9 @@ jobs:
           mkdir -p allure-reports
           cd allure-reports
 
-          if [ $(ls -d */ 2>/dev/null | wc -l) -gt 10 ]; then
-            ls -d */ | sort -r | tail -n +11 | xargs rm -rf
+          # Sort folders by time and remove older ones, keeping the latest 10
+          if [ $(ls -1t | wc -l) -gt 10 ]; then
+            ls -1t | tail -n +11 | xargs rm -rf
           else
             echo "✅ Less than 10 reports exist, skipping cleanup."
           fi
@@ -87,15 +88,15 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: ./target/allure-report
-          destination_dir: allure-reports/${{ env.RUN_ID }}
+          publish_dir: ./target/allure-report/${{ env.REPORT_DIR }}
+          destination_dir: allure-reports/${{ env.REPORT_DIR }}
           publish_branch: allure-reports
           keep_files: true
           commit_message: "Deploy Allure report [skip ci]"
 
       - name: Get Report URL
         id: report_url
-        run: echo "url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.run_id }}/index.html" >> $GITHUB_ENV
+        run: echo "url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/allure-reports/${{ env.REPORT_DIR }}/index.html" >> $GITHUB_ENV
 
       - name: Add Report Link to Workflow Summary
         run: |
