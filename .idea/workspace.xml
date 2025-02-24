@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a22accb5-ef9e-4c7f-8130-96fe0692fe67" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2qXFu5P4eIV45wFaSGabAtHDqTx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.RunTestsByTag.executor": "Run",
+    "Application.TestRunner.executor": "Run",
+    "JUnit.AvailableMembersSchemaValidationTest.executor": "Run",
+    "JUnit.AvailableMembersTest,testAvailableIds and 3 more.executor": "Run",
+    "JUnit.AvailableMembersTest.executor": "Run",
+    "JUnit.AvailableMembersTest.testAvailableEmails.executor": "Run",
+    "JUnit.AvailableMembersTest.testAvailableIds.executor": "Run",
+    "JUnit.AvailableMembersTest.testAvailableNames.executor": "Run",
+    "JUnit.AvailableMembersTest.testAvailableStatuses.executor": "Run",
+    "JUnit.AvailableMembersUnitTest,testAvailable1Unit and 1 more.executor": "Run",
+    "JUnit.AvailableMembersUnitTest.executor": "Run",
+    "JUnit.JUnitRunnerTest.executor": "Run",
+    "JUnit.MembersOfSurveySchemaValidationTest.executor": "Run",
+    "JUnit.MembersOfSurveyTest.executor": "Run",
+    "JUnit.MembersOfSurveyUnitTest.executor": "Run",
+    "JUnit.PointsSchemaValidationTest.executor": "Run",
+    "JUnit.ResponseTest.executor": "Run",
+    "JUnit.ResponseTest.testAvailableMembersStatusFail.executor": "Run",
+    "JUnit.ResponseTest.testMemberPointsStatusFail.executor": "Run",
+    "JUnit.ResponseTest.testMemberPointsStatusSuccess.executor": "Run",
+    "JUnit.ResponseTest.testMembersOfSurveyStatusFail.executor": "Run",
+    "JUnit.ResponseTest.testMembersOfSurveyStatusSuccess.executor": "Run",
+    "JUnit.ResponseTest.testSurveyStatisticsStatusSuccess.executor": "Run",
+    "JUnit.ResponseTest.testSurveysOfMembersStatusFail.executor": "Run",
+    "JUnit.ResponseUnitTest.executor": "Run",
+    "JUnit.ResponseUnitTest.testSurveyPointsStatusFail.executor": "Run",
+    "JUnit.ResponseUnitTest.testSurveyPointsStatusSuccess.executor": "Run",
+    "JUnit.ResponseUnitTest.testSurveyStatisticsStatusFail.executor": "Run",
+    "JUnit.StatisticsSchemaValidationTest.executor": "Run",
+    "JUnit.SurveyOfMembersSchemaValidationTest.executor": "Run",
+    "JUnit.SurveyOfMembersTest.executor": "Run",
+    "JUnit.SurveyPointsTest,testSurveyIds and 4 more.executor": "Run",
+    "JUnit.SurveyPointsTest.executor": "Run",
+    "JUnit.SurveyPointsTest.testSurveyIds.executor": "Run",
+    "JUnit.SurveyPointsTest.testSurveyPointsValidation.executor": "Run",
+    "JUnit.SurveyPointsUnitTest.executor": "Run",
+    "JUnit.SurveyPointsUnitTest.testPoints1Unit.executor": "Run",
+    "JUnit.SurveyPointsUnitTest.testPoints300Unit.executor": "Run",
+    "JUnit.SurveySchemaValidationTest.executor": "Run",
+    "JUnit.SurveySchemaValidationTest.testSurveyResponseValidation.executor": "Run",
+    "JUnit.SurveyStatisticsTest.executor": "Run",
+    "JUnit.SurveyStatisticsTest.testAverageLength.executor": "Run",
+    "JUnit.SurveyStatisticsTest.testNumberOfCompletes.executor": "Run",
+    "JUnit.SurveyStatisticsTest.testNumberOfFiltered.executor": "Run",
+    "JUnit.SurveyStatisticsTest.testNumberOfRejected.executor": "Run",
+    "JUnit.SurveyStatisticsTest.testSurveyIds.executor": "Run",
+    "JUnit.SurveyStatisticsTest.testSurveyMetricProperties.executor": "Run",
+    "JUnit.SurveyStatisticsTest.testSurveyStatisticsStatus.executor": "Run",
+    "JUnit.SurveyStatisticsUnitTest.executor": "Run",
+    "JUnit.SurveyUnitTest.executor": "Run",
+    "JUnit.SurveyUnitTest.testSurveyUnits.executor": "Run",
+    "JUnit.SurveysOfMemberSchemaValidationTest.executor": "Run",
+    "JUnit.SurveysOfMemberTest.executor": "Run",
+    "JUnit.SurveysOfMemberUnitTest.executor": "Run",
+    "JUnit.SurveysOfMemberUnitTest.testSurveysOfMember10Unit.executor": "Run",
+    "JavaScript Debug.allure-maven.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "allure-reports",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Program Files/API testing/surveyQA/surveyQA/survey_QA/src/test/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="tests" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Program Files\API testing\surveyQA\surveyQA\survey_QA\src\test\resources" />
+      <recent name="D:\Program Files\API testing\surveyQA\surveyQA\survey_QA" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Program Files\API testing\surveyQA\surveyQA\survey_QA\tools" />
+      <recent name="D:\Program Files\API testing\surveyQA\surveyQA\survey_QA\src\test\java\resources\allure-cli" />
+      <recent name="D:\Program Files\API testing\surveyQA\surveyQA\survey_QA\src\main\java" />
+      <recent name="D:\Program Files\API testing\surveyQA\surveyQA\survey_QA\src\test\java\resources\data" />
+      <recent name="D:\Program Files\API testing\surveyQA\surveyQA\survey_QA\src\test\java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.JUnitRunnerTest">
+    <configuration name="AvailableMembersSchemaValidationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.e2e.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.e2e" />
+      <option name="MAIN_CLASS_NAME" value="tests.e2e.AvailableMembersSchemaValidationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JUnitRunnerTest" type="JUnit" factoryName="JUnit">
+      <module name="untitled" />
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="tags" />
+      <option name="VM_PARAMETERS" />
+      <tag value="unit" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MembersOfSurveySchemaValidationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.e2e.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.e2e" />
+      <option name="MAIN_CLASS_NAME" value="tests.e2e.MembersOfSurveySchemaValidationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResponseUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.unit" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.ResponseUnitTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SurveyStatisticsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.integration" />
+      <option name="MAIN_CLASS_NAME" value="tests.integration.SurveyStatisticsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SurveyStatisticsUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.unit" />
+      <option name="MAIN_CLASS_NAME" value="tests.unit.SurveyStatisticsUnitTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="surveyQA" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="surveyQA" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.JUnitRunnerTest" />
+      <item itemvalue="JUnit.MembersOfSurveySchemaValidationTest" />
+      <item itemvalue="JUnit.ResponseUnitTest" />
+      <item itemvalue="JUnit.SurveyStatisticsTest" />
+      <item itemvalue="JUnit.SurveyStatisticsUnitTest" />
+      <item itemvalue="JUnit.AvailableMembersSchemaValidationTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AvailableMembersSchemaValidationTest" />
+        <item itemvalue="JUnit.SurveyStatisticsUnitTest" />
+        <item itemvalue="JUnit.SurveyStatisticsTest" />
+        <item itemvalue="JUnit.ResponseUnitTest" />
+        <item itemvalue="JUnit.MembersOfSurveySchemaValidationTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a22accb5-ef9e-4c7f-8130-96fe0692fe67" name="Changes" comment="" />
+      <created>1734801232619</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1734801232619</updated>
+      <workItem from="1734801233701" duration="1492000" />
+      <workItem from="1734889777931" duration="6836000" />
+      <workItem from="1734947173230" duration="23000" />
+      <workItem from="1734947207149" duration="27981000" />
+      <workItem from="1735234202606" duration="7438000" />
+      <workItem from="1735242109173" duration="2681000" />
+      <workItem from="1735287981027" duration="14846000" />
+      <workItem from="1735374966833" duration="60682000" />
+      <workItem from="1736334657927" duration="13932000" />
+      <workItem from="1739781907531" duration="3857000" />
+      <workItem from="1739785862416" duration="17168000" />
+      <workItem from="1739954173161" duration="2543000" />
+      <workItem from="1739956741816" duration="6532000" />
+      <workItem from="1739978327154" duration="6097000" />
+      <workItem from="1740042044559" duration="33000" />
+      <workItem from="1740042105062" duration="600000" />
+      <workItem from="1740042731224" duration="14000" />
+      <workItem from="1740042777658" duration="876000" />
+      <workItem from="1740043672881" duration="18708000" />
+      <workItem from="1740218599815" duration="4021000" />
+      <workItem from="1740222631806" duration="38396000" />
+      <workItem from="1740421143978" duration="2559000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: org.simpleflatmapper:lightning-csv:9.0.2" type="java-imported" external-system-id="Maven">
+    <properties groupId="org.simpleflatmapper" artifactId="lightning-csv" version="9.0.2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/simpleflatmapper/lightning-csv/9.0.2/lightning-csv-9.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/simpleflatmapper/lightning-csv/9.0.2/lightning-csv-9.0.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/simpleflatmapper/lightning-csv/9.0.2/lightning-csv-9.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

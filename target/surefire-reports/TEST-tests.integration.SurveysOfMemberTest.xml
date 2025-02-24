@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="tests.integration.SurveysOfMemberTest" time="7.04" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1250"/>
+    <property name="java.class.path" value="D:\Program Files\API testing\surveyQA\surveyQA\survey_QA\target\test-classes;D:\Program Files\API testing\surveyQA\surveyQA\survey_QA\target\classes;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\user\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\user\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\user\.m2\repository\io\qameta\allure\allure-junit5\2.24.0\allure-junit5-2.24.0.jar;C:\Users\user\.m2\repository\io\qameta\allure\allure-junit-platform\2.24.0\allure-junit-platform-2.24.0.jar;C:\Users\user\.m2\repository\io\qameta\allure\allure-java-commons\2.24.0\allure-java-commons-2.24.0.jar;C:\Users\user\.m2\repository\io\qameta\allure\allure-model\2.24.0\allure-model-2.24.0.jar;C:\Users\user\.m2\repository\io\qameta\allure\allure-test-filter\2.24.0\allure-test-filter-2.24.0.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.2\junit-platform-launcher-1.9.2.jar;C:\Users\user\.m2\repository\io\rest-assured\rest-assured\5.3.0\rest-assured-5.3.0.jar;C:\Users\user\.m2\repository\org\apache\groovy\groovy\4.0.6\groovy-4.0.6.jar;C:\Users\user\.m2\repository\org\apache\groovy\groovy-xml\4.0.6\groovy-xml-4.0.6.jar;C:\Users\user\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\user\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\user\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\user\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\user\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\user\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\user\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\user\.m2\repository\io\rest-assured\xml-path\5.3.0\xml-path-5.3.0.jar;C:\Users\user\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\user\.m2\repository\io\qameta\allure\allure-rest-assured\2.24.0\allure-rest-assured-2.24.0.jar;C:\Users\user\.m2\repository\io\qameta\allure\allure-attachments\2.24.0\allure-attachments-2.24.0.jar;C:\Users\user\.m2\repository\org\freemarker\freemarker\2.3.31\freemarker-2.3.31.jar;C:\Users\user\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\user\.m2\repository\ch\qos\logback\logback-classic\1.2.6\logback-classic-1.2.6.jar;C:\Users\user\.m2\repository\ch\qos\logback\logback-core\1.2.6\logback-core-1.2.6.jar;C:\Users\user\.m2\repository\org\apache\commons\commons-csv\1.9.0\commons-csv-1.9.0.jar;C:\Users\user\.m2\repository\io\rest-assured\json-path\5.1.1\json-path-5.1.1.jar;C:\Users\user\.m2\repository\org\apache\groovy\groovy-json\4.0.1\groovy-json-4.0.1.jar;C:\Users\user\.m2\repository\io\rest-assured\rest-assured-common\5.1.1\rest-assured-common-5.1.1.jar;C:\Users\user\.m2\repository\io\rest-assured\json-schema-validator\5.3.0\json-schema-validator-5.3.0.jar;C:\Users\user\.m2\repository\com\github\java-json-tools\json-schema-validator\2.2.14\json-schema-validator-2.2.14.jar;C:\Users\user\.m2\repository\com\google\guava\guava\28.2-android\guava-28.2-android.jar;C:\Users\user\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\user\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\user\.m2\repository\org\checkerframework\checker-compat-qual\2.5.5\checker-compat-qual-2.5.5.jar;C:\Users\user\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\user\.m2\repository\com\github\java-json-tools\jackson-coreutils-equivalence\1.0\jackson-coreutils-equivalence-1.0.jar;C:\Users\user\.m2\repository\com\github\java-json-tools\jackson-coreutils\2.0\jackson-coreutils-2.0.jar;C:\Users\user\.m2\repository\com\github\java-json-tools\msg-simple\1.2\msg-simple-1.2.jar;C:\Users\user\.m2\repository\com\github\java-json-tools\btf\1.3\btf-1.3.jar;C:\Users\user\.m2\repository\com\github\java-json-tools\json-schema-core\1.2.14\json-schema-core-1.2.14.jar;C:\Users\user\.m2\repository\com\github\java-json-tools\uri-template\0.10\uri-template-0.10.jar;C:\Users\user\.m2\repository\org\mozilla\rhino\1.7.7.2\rhino-1.7.7.2.jar;C:\Users\user\.m2\repository\com\sun\mail\mailapi\1.6.2\mailapi-1.6.2.jar;C:\Users\user\.m2\repository\joda-time\joda-time\2.10.5\joda-time-2.10.5.jar;C:\Users\user\.m2\repository\com\googlecode\libphonenumber\libphonenumber\8.11.1\libphonenumber-8.11.1.jar;C:\Users\user\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\user\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\user\.m2\repository\io\gatling\highcharts\gatling-charts-highcharts\3.13.4\gatling-charts-highcharts-3.13.4.jar;C:\Users\user\.m2\repository\org\scala-lang\scala-library\2.13.16\scala-library-2.13.16.jar;C:\Users\user\.m2\repository\io\gatling\gatling-recorder\3.13.4\gatling-recorder-3.13.4.jar;C:\Users\user\.m2\repository\org\scala-lang\modules\scala-swing_2.13\3.0.0\scala-swing_2.13-3.0.0.jar;C:\Users\user\.m2\repository\io\gatling\gatling-recorder-bc-shaded\1.80.0\gatling-recorder-bc-shaded-1.80.0.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-http\4.1.118.Final\netty-codec-http-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\gatling\gatling-app\3.13.4\gatling-app-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-core-java\3.13.4\gatling-core-java-3.13.4.jar;C:\Users\user\.m2\repository\net\jodah\typetools\0.6.3\typetools-0.6.3.jar;C:\Users\user\.m2\repository\com\github\spotbugs\spotbugs-annotations\4.9.1\spotbugs-annotations-4.9.1.jar;C:\Users\user\.m2\repository\io\gatling\gatling-http-java\3.13.4\gatling-http-java-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-jms\3.13.4\gatling-jms-3.13.4.jar;C:\Users\user\.m2\repository\javax\jms\javax.jms-api\2.0.1\javax.jms-api-2.0.1.jar;C:\Users\user\.m2\repository\com\eatthepath\fast-uuid\0.2.0\fast-uuid-0.2.0.jar;C:\Users\user\.m2\repository\io\gatling\gatling-jms-java\3.13.4\gatling-jms-java-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-jdbc\3.13.4\gatling-jdbc-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-jdbc-java\3.13.4\gatling-jdbc-java-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-redis\3.13.4\gatling-redis-3.13.4.jar;C:\Users\user\.m2\repository\net\debasishg\redisclient_2.13\3.42\redisclient_2.13-3.42.jar;C:\Users\user\.m2\repository\org\apache\commons\commons-pool2\2.8.0\commons-pool2-2.8.0.jar;C:\Users\user\.m2\repository\io\gatling\gatling-redis-java\3.13.4\gatling-redis-java-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-charts\3.13.4\gatling-charts-3.13.4.jar;C:\Users\user\.m2\repository\com\tdunning\t-digest\3.3\t-digest-3.3.jar;C:\Users\user\.m2\repository\io\gatling\gatling-core\3.13.4\gatling-core-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-netty-util\3.13.4\gatling-netty-util-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-shared-util_2.13\0.0.12\gatling-shared-util_2.13-0.0.12.jar;C:\Users\user\.m2\repository\org\scala-lang\modules\scala-collection-compat_2.13\2.12.0\scala-collection-compat_2.13-2.12.0.jar;C:\Users\user\.m2\repository\io\netty\netty-buffer\4.1.118.Final\netty-buffer-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-epoll\4.1.118.Final\netty-transport-native-epoll-4.1.118.Final-linux-x86_64.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.118.Final\netty-transport-classes-epoll-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-epoll\4.1.118.Final\netty-transport-native-epoll-4.1.118.Final-linux-aarch_64.jar;C:\Users\user\.m2\repository\io\netty\incubator\netty-incubator-transport-native-io_uring\0.0.26.Final\netty-incubator-transport-native-io_uring-0.0.26.Final-linux-x86_64.jar;C:\Users\user\.m2\repository\io\netty\incubator\netty-incubator-transport-classes-io_uring\0.0.26.Final\netty-incubator-transport-classes-io_uring-0.0.26.Final.jar;C:\Users\user\.m2\repository\io\netty\incubator\netty-incubator-transport-native-io_uring\0.0.26.Final\netty-incubator-transport-native-io_uring-0.0.26.Final-linux-aarch_64.jar;C:\Users\user\.m2\repository\io\gatling\gatling-quicklens\3.13.4\gatling-quicklens-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-commons\3.13.4\gatling-commons-3.13.4.jar;C:\Users\user\.m2\repository\com\typesafe\config\1.4.3\config-1.4.3.jar;C:\Users\user\.m2\repository\io\github\metarank\cfor_2.13\0.3\cfor_2.13-0.3.jar;C:\Users\user\.m2\repository\org\scala-lang\scala-reflect\2.13.10\scala-reflect-2.13.10.jar;C:\Users\user\.m2\repository\com\typesafe\scala-logging\scala-logging_2.13\3.9.5\scala-logging_2.13-3.9.5.jar;C:\Users\user\.m2\repository\io\gatling\gatling-jsonpath\3.13.4\gatling-jsonpath-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-shared-model_2.13\0.0.11\gatling-shared-model_2.13-0.0.11.jar;C:\Users\user\.m2\repository\io\suzaku\boopickle_2.13\1.5.0\boopickle_2.13-1.5.0.jar;C:\Users\user\.m2\repository\io\gatling\gatling-shared-cli\0.0.6\gatling-shared-cli-0.0.6.jar;C:\Users\user\.m2\repository\org\simpleflatmapper\lightning-csv\9.0.2\lightning-csv-9.0.2.jar;C:\Users\user\.m2\repository\org\simpleflatmapper\sfm-util\9.0.2\sfm-util-9.0.2.jar;C:\Users\user\.m2\repository\com\github\ben-manes\caffeine\caffeine\3.2.0\caffeine-3.2.0.jar;C:\Users\user\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\user\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\user\.m2\repository\io\pebbletemplates\pebble\3.2.3\pebble-3.2.3.jar;C:\Users\user\.m2\repository\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;C:\Users\user\.m2\repository\org\scala-lang\modules\scala-parser-combinators_2.13\2.4.0\scala-parser-combinators_2.13-2.4.0.jar;C:\Users\user\.m2\repository\com\github\scopt\scopt_2.13\3.7.1\scopt_2.13-3.7.1.jar;C:\Users\user\.m2\repository\io\netty\netty-handler\4.1.118.Final\netty-handler-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-common\4.1.118.Final\netty-common-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver\4.1.118.Final\netty-resolver-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport\4.1.118.Final\netty-transport-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.118.Final\netty-transport-native-unix-common-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec\4.1.118.Final\netty-codec-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-tcnative-classes\2.0.70.Final\netty-tcnative-classes-2.0.70.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.70.Final\netty-tcnative-boringssl-static-2.0.70.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.70.Final\netty-tcnative-boringssl-static-2.0.70.Final-linux-x86_64.jar;C:\Users\user\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.70.Final\netty-tcnative-boringssl-static-2.0.70.Final-linux-aarch_64.jar;C:\Users\user\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.70.Final\netty-tcnative-boringssl-static-2.0.70.Final-osx-x86_64.jar;C:\Users\user\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.70.Final\netty-tcnative-boringssl-static-2.0.70.Final-osx-aarch_64.jar;C:\Users\user\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.70.Final\netty-tcnative-boringssl-static-2.0.70.Final-windows-x86_64.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.2\jackson-databind-2.18.2.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.2\jackson-annotations-2.18.2.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.2\jackson-core-2.18.2.jar;C:\Users\user\.m2\repository\net\sf\saxon\Saxon-HE\12.5\Saxon-HE-12.5.jar;C:\Users\user\.m2\repository\org\xmlresolver\xmlresolver\6.0.12\xmlresolver-6.0.12.jar;C:\Users\user\.m2\repository\org\xmlresolver\xmlresolver\6.0.12\xmlresolver-6.0.12-data.jar;C:\Users\user\.m2\repository\org\jodd\jodd-lagarto\6.0.6\jodd-lagarto-6.0.6.jar;C:\Users\user\.m2\repository\org\jodd\jodd-util\6.3.0\jodd-util-6.3.0.jar;C:\Users\user\.m2\repository\io\burt\jmespath-jackson\0.6.0\jmespath-jackson-0.6.0.jar;C:\Users\user\.m2\repository\io\burt\jmespath-core\0.6.0\jmespath-core-0.6.0.jar;C:\Users\user\.m2\repository\io\gatling\gatling-http\3.13.4\gatling-http-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-http-client\3.13.4\gatling-http-client-3.13.4.jar;C:\Users\user\.m2\repository\io\netty\netty-handler-proxy\4.1.118.Final\netty-handler-proxy-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-socks\4.1.118.Final\netty-codec-socks-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns\4.1.118.Final\netty-resolver-dns-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-dns\4.1.118.Final\netty-codec-dns-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-http2\4.1.118.Final\netty-codec-http2-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns-native-macos\4.1.118.Final\netty-resolver-dns-native-macos-4.1.118.Final-osx-x86_64.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns-classes-macos\4.1.118.Final\netty-resolver-dns-classes-macos-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns-native-macos\4.1.118.Final\netty-resolver-dns-native-macos-4.1.118.Final-osx-aarch_64.jar;C:\Users\user\.m2\repository\com\aayushatharva\brotli4j\brotli4j\1.18.0\brotli4j-1.18.0.jar;C:\Users\user\.m2\repository\com\aayushatharva\brotli4j\service\1.18.0\service-1.18.0.jar;C:\Users\user\.m2\repository\com\aayushatharva\brotli4j\native-linux-x86_64\1.18.0\native-linux-x86_64-1.18.0.jar;C:\Users\user\.m2\repository\com\aayushatharva\brotli4j\native-linux-aarch64\1.18.0\native-linux-aarch64-1.18.0.jar;C:\Users\user\.m2\repository\com\aayushatharva\brotli4j\native-osx-x86_64\1.18.0\native-osx-x86_64-1.18.0.jar;C:\Users\user\.m2\repository\com\aayushatharva\brotli4j\native-osx-aarch64\1.18.0\native-osx-aarch64-1.18.0.jar;C:\Users\user\.m2\repository\com\aayushatharva\brotli4j\native-windows-x86_64\1.18.0\native-windows-x86_64-1.18.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="user.timezone" value="Europe/Budapest"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="D:\Program Files\Java\jdk-11.0.24_windows-x64_bin\jdk-11.0.24\bin"/>
+    <property name="sun.java.command" value="C:\Users\user\AppData\Local\Temp\surefire14506977628009019051\surefirebooter-20250224121224336_3.jar C:\Users\user\AppData\Local\Temp\surefire14506977628009019051 2025-02-24T12-12-24_203-jvmRun1 surefire-20250224121224336_1tmp surefire_0-20250224121224336_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\Program Files\API testing\surveyQA\surveyQA\survey_QA\target\test-classes;D:\Program Files\API testing\surveyQA\surveyQA\survey_QA\target\classes;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\user\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\user\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\user\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\user\.m2\repository\io\qameta\allure\allure-junit5\2.24.0\allure-junit5-2.24.0.jar;C:\Users\user\.m2\repository\io\qameta\allure\allure-junit-platform\2.24.0\allure-junit-platform-2.24.0.jar;C:\Users\user\.m2\repository\io\qameta\allure\allure-java-commons\2.24.0\allure-java-commons-2.24.0.jar;C:\Users\user\.m2\repository\io\qameta\allure\allure-model\2.24.0\allure-model-2.24.0.jar;C:\Users\user\.m2\repository\io\qameta\allure\allure-test-filter\2.24.0\allure-test-filter-2.24.0.jar;C:\Users\user\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.2\junit-platform-launcher-1.9.2.jar;C:\Users\user\.m2\repository\io\rest-assured\rest-assured\5.3.0\rest-assured-5.3.0.jar;C:\Users\user\.m2\repository\org\apache\groovy\groovy\4.0.6\groovy-4.0.6.jar;C:\Users\user\.m2\repository\org\apache\groovy\groovy-xml\4.0.6\groovy-xml-4.0.6.jar;C:\Users\user\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\user\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\user\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\user\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\user\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\user\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\user\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\user\.m2\repository\io\rest-assured\xml-path\5.3.0\xml-path-5.3.0.jar;C:\Users\user\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\user\.m2\repository\io\qameta\allure\allure-rest-assured\2.24.0\allure-rest-assured-2.24.0.jar;C:\Users\user\.m2\repository\io\qameta\allure\allure-attachments\2.24.0\allure-attachments-2.24.0.jar;C:\Users\user\.m2\repository\org\freemarker\freemarker\2.3.31\freemarker-2.3.31.jar;C:\Users\user\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\user\.m2\repository\ch\qos\logback\logback-classic\1.2.6\logback-classic-1.2.6.jar;C:\Users\user\.m2\repository\ch\qos\logback\logback-core\1.2.6\logback-core-1.2.6.jar;C:\Users\user\.m2\repository\org\apache\commons\commons-csv\1.9.0\commons-csv-1.9.0.jar;C:\Users\user\.m2\repository\io\rest-assured\json-path\5.1.1\json-path-5.1.1.jar;C:\Users\user\.m2\repository\org\apache\groovy\groovy-json\4.0.1\groovy-json-4.0.1.jar;C:\Users\user\.m2\repository\io\rest-assured\rest-assured-common\5.1.1\rest-assured-common-5.1.1.jar;C:\Users\user\.m2\repository\io\rest-assured\json-schema-validator\5.3.0\json-schema-validator-5.3.0.jar;C:\Users\user\.m2\repository\com\github\java-json-tools\json-schema-validator\2.2.14\json-schema-validator-2.2.14.jar;C:\Users\user\.m2\repository\com\google\guava\guava\28.2-android\guava-28.2-android.jar;C:\Users\user\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\user\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\user\.m2\repository\org\checkerframework\checker-compat-qual\2.5.5\checker-compat-qual-2.5.5.jar;C:\Users\user\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\user\.m2\repository\com\github\java-json-tools\jackson-coreutils-equivalence\1.0\jackson-coreutils-equivalence-1.0.jar;C:\Users\user\.m2\repository\com\github\java-json-tools\jackson-coreutils\2.0\jackson-coreutils-2.0.jar;C:\Users\user\.m2\repository\com\github\java-json-tools\msg-simple\1.2\msg-simple-1.2.jar;C:\Users\user\.m2\repository\com\github\java-json-tools\btf\1.3\btf-1.3.jar;C:\Users\user\.m2\repository\com\github\java-json-tools\json-schema-core\1.2.14\json-schema-core-1.2.14.jar;C:\Users\user\.m2\repository\com\github\java-json-tools\uri-template\0.10\uri-template-0.10.jar;C:\Users\user\.m2\repository\org\mozilla\rhino\1.7.7.2\rhino-1.7.7.2.jar;C:\Users\user\.m2\repository\com\sun\mail\mailapi\1.6.2\mailapi-1.6.2.jar;C:\Users\user\.m2\repository\joda-time\joda-time\2.10.5\joda-time-2.10.5.jar;C:\Users\user\.m2\repository\com\googlecode\libphonenumber\libphonenumber\8.11.1\libphonenumber-8.11.1.jar;C:\Users\user\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\user\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\user\.m2\repository\io\gatling\highcharts\gatling-charts-highcharts\3.13.4\gatling-charts-highcharts-3.13.4.jar;C:\Users\user\.m2\repository\org\scala-lang\scala-library\2.13.16\scala-library-2.13.16.jar;C:\Users\user\.m2\repository\io\gatling\gatling-recorder\3.13.4\gatling-recorder-3.13.4.jar;C:\Users\user\.m2\repository\org\scala-lang\modules\scala-swing_2.13\3.0.0\scala-swing_2.13-3.0.0.jar;C:\Users\user\.m2\repository\io\gatling\gatling-recorder-bc-shaded\1.80.0\gatling-recorder-bc-shaded-1.80.0.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-http\4.1.118.Final\netty-codec-http-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\gatling\gatling-app\3.13.4\gatling-app-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-core-java\3.13.4\gatling-core-java-3.13.4.jar;C:\Users\user\.m2\repository\net\jodah\typetools\0.6.3\typetools-0.6.3.jar;C:\Users\user\.m2\repository\com\github\spotbugs\spotbugs-annotations\4.9.1\spotbugs-annotations-4.9.1.jar;C:\Users\user\.m2\repository\io\gatling\gatling-http-java\3.13.4\gatling-http-java-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-jms\3.13.4\gatling-jms-3.13.4.jar;C:\Users\user\.m2\repository\javax\jms\javax.jms-api\2.0.1\javax.jms-api-2.0.1.jar;C:\Users\user\.m2\repository\com\eatthepath\fast-uuid\0.2.0\fast-uuid-0.2.0.jar;C:\Users\user\.m2\repository\io\gatling\gatling-jms-java\3.13.4\gatling-jms-java-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-jdbc\3.13.4\gatling-jdbc-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-jdbc-java\3.13.4\gatling-jdbc-java-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-redis\3.13.4\gatling-redis-3.13.4.jar;C:\Users\user\.m2\repository\net\debasishg\redisclient_2.13\3.42\redisclient_2.13-3.42.jar;C:\Users\user\.m2\repository\org\apache\commons\commons-pool2\2.8.0\commons-pool2-2.8.0.jar;C:\Users\user\.m2\repository\io\gatling\gatling-redis-java\3.13.4\gatling-redis-java-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-charts\3.13.4\gatling-charts-3.13.4.jar;C:\Users\user\.m2\repository\com\tdunning\t-digest\3.3\t-digest-3.3.jar;C:\Users\user\.m2\repository\io\gatling\gatling-core\3.13.4\gatling-core-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-netty-util\3.13.4\gatling-netty-util-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-shared-util_2.13\0.0.12\gatling-shared-util_2.13-0.0.12.jar;C:\Users\user\.m2\repository\org\scala-lang\modules\scala-collection-compat_2.13\2.12.0\scala-collection-compat_2.13-2.12.0.jar;C:\Users\user\.m2\repository\io\netty\netty-buffer\4.1.118.Final\netty-buffer-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-epoll\4.1.118.Final\netty-transport-native-epoll-4.1.118.Final-linux-x86_64.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.118.Final\netty-transport-classes-epoll-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-epoll\4.1.118.Final\netty-transport-native-epoll-4.1.118.Final-linux-aarch_64.jar;C:\Users\user\.m2\repository\io\netty\incubator\netty-incubator-transport-native-io_uring\0.0.26.Final\netty-incubator-transport-native-io_uring-0.0.26.Final-linux-x86_64.jar;C:\Users\user\.m2\repository\io\netty\incubator\netty-incubator-transport-classes-io_uring\0.0.26.Final\netty-incubator-transport-classes-io_uring-0.0.26.Final.jar;C:\Users\user\.m2\repository\io\netty\incubator\netty-incubator-transport-native-io_uring\0.0.26.Final\netty-incubator-transport-native-io_uring-0.0.26.Final-linux-aarch_64.jar;C:\Users\user\.m2\repository\io\gatling\gatling-quicklens\3.13.4\gatling-quicklens-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-commons\3.13.4\gatling-commons-3.13.4.jar;C:\Users\user\.m2\repository\com\typesafe\config\1.4.3\config-1.4.3.jar;C:\Users\user\.m2\repository\io\github\metarank\cfor_2.13\0.3\cfor_2.13-0.3.jar;C:\Users\user\.m2\repository\org\scala-lang\scala-reflect\2.13.10\scala-reflect-2.13.10.jar;C:\Users\user\.m2\repository\com\typesafe\scala-logging\scala-logging_2.13\3.9.5\scala-logging_2.13-3.9.5.jar;C:\Users\user\.m2\repository\io\gatling\gatling-jsonpath\3.13.4\gatling-jsonpath-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-shared-model_2.13\0.0.11\gatling-shared-model_2.13-0.0.11.jar;C:\Users\user\.m2\repository\io\suzaku\boopickle_2.13\1.5.0\boopickle_2.13-1.5.0.jar;C:\Users\user\.m2\repository\io\gatling\gatling-shared-cli\0.0.6\gatling-shared-cli-0.0.6.jar;C:\Users\user\.m2\repository\org\simpleflatmapper\lightning-csv\9.0.2\lightning-csv-9.0.2.jar;C:\Users\user\.m2\repository\org\simpleflatmapper\sfm-util\9.0.2\sfm-util-9.0.2.jar;C:\Users\user\.m2\repository\com\github\ben-manes\caffeine\caffeine\3.2.0\caffeine-3.2.0.jar;C:\Users\user\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\user\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\user\.m2\repository\io\pebbletemplates\pebble\3.2.3\pebble-3.2.3.jar;C:\Users\user\.m2\repository\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;C:\Users\user\.m2\repository\org\scala-lang\modules\scala-parser-combinators_2.13\2.4.0\scala-parser-combinators_2.13-2.4.0.jar;C:\Users\user\.m2\repository\com\github\scopt\scopt_2.13\3.7.1\scopt_2.13-3.7.1.jar;C:\Users\user\.m2\repository\io\netty\netty-handler\4.1.118.Final\netty-handler-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-common\4.1.118.Final\netty-common-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver\4.1.118.Final\netty-resolver-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport\4.1.118.Final\netty-transport-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.118.Final\netty-transport-native-unix-common-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec\4.1.118.Final\netty-codec-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-tcnative-classes\2.0.70.Final\netty-tcnative-classes-2.0.70.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.70.Final\netty-tcnative-boringssl-static-2.0.70.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.70.Final\netty-tcnative-boringssl-static-2.0.70.Final-linux-x86_64.jar;C:\Users\user\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.70.Final\netty-tcnative-boringssl-static-2.0.70.Final-linux-aarch_64.jar;C:\Users\user\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.70.Final\netty-tcnative-boringssl-static-2.0.70.Final-osx-x86_64.jar;C:\Users\user\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.70.Final\netty-tcnative-boringssl-static-2.0.70.Final-osx-aarch_64.jar;C:\Users\user\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.70.Final\netty-tcnative-boringssl-static-2.0.70.Final-windows-x86_64.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.2\jackson-databind-2.18.2.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.2\jackson-annotations-2.18.2.jar;C:\Users\user\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.2\jackson-core-2.18.2.jar;C:\Users\user\.m2\repository\net\sf\saxon\Saxon-HE\12.5\Saxon-HE-12.5.jar;C:\Users\user\.m2\repository\org\xmlresolver\xmlresolver\6.0.12\xmlresolver-6.0.12.jar;C:\Users\user\.m2\repository\org\xmlresolver\xmlresolver\6.0.12\xmlresolver-6.0.12-data.jar;C:\Users\user\.m2\repository\org\jodd\jodd-lagarto\6.0.6\jodd-lagarto-6.0.6.jar;C:\Users\user\.m2\repository\org\jodd\jodd-util\6.3.0\jodd-util-6.3.0.jar;C:\Users\user\.m2\repository\io\burt\jmespath-jackson\0.6.0\jmespath-jackson-0.6.0.jar;C:\Users\user\.m2\repository\io\burt\jmespath-core\0.6.0\jmespath-core-0.6.0.jar;C:\Users\user\.m2\repository\io\gatling\gatling-http\3.13.4\gatling-http-3.13.4.jar;C:\Users\user\.m2\repository\io\gatling\gatling-http-client\3.13.4\gatling-http-client-3.13.4.jar;C:\Users\user\.m2\repository\io\netty\netty-handler-proxy\4.1.118.Final\netty-handler-proxy-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-socks\4.1.118.Final\netty-codec-socks-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns\4.1.118.Final\netty-resolver-dns-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-dns\4.1.118.Final\netty-codec-dns-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-codec-http2\4.1.118.Final\netty-codec-http2-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns-native-macos\4.1.118.Final\netty-resolver-dns-native-macos-4.1.118.Final-osx-x86_64.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns-classes-macos\4.1.118.Final\netty-resolver-dns-classes-macos-4.1.118.Final.jar;C:\Users\user\.m2\repository\io\netty\netty-resolver-dns-native-macos\4.1.118.Final\netty-resolver-dns-native-macos-4.1.118.Final-osx-aarch_64.jar;C:\Users\user\.m2\repository\com\aayushatharva\brotli4j\brotli4j\1.18.0\brotli4j-1.18.0.jar;C:\Users\user\.m2\repository\com\aayushatharva\brotli4j\service\1.18.0\service-1.18.0.jar;C:\Users\user\.m2\repository\com\aayushatharva\brotli4j\native-linux-x86_64\1.18.0\native-linux-x86_64-1.18.0.jar;C:\Users\user\.m2\repository\com\aayushatharva\brotli4j\native-linux-aarch64\1.18.0\native-linux-aarch64-1.18.0.jar;C:\Users\user\.m2\repository\com\aayushatharva\brotli4j\native-osx-x86_64\1.18.0\native-osx-x86_64-1.18.0.jar;C:\Users\user\.m2\repository\com\aayushatharva\brotli4j\native-osx-aarch64\1.18.0\native-osx-aarch64-1.18.0.jar;C:\Users\user\.m2\repository\com\aayushatharva\brotli4j\native-windows-x86_64\1.18.0\native-windows-x86_64-1.18.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="allure.results.directory" value="D:\Program Files\API testing\surveyQA\surveyQA\survey_QA\target/allure-results"/>
+    <property name="user.home" value="C:\Users\user"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="D:\Program Files\Java\jdk-11.0.24_windows-x64_bin\jdk-11.0.24"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\Program Files\API testing\surveyQA\surveyQA\survey_QA"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\user\AppData\Local\Temp\surefire14506977628009019051\surefirebooter-20250224121224336_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.24+7-LTS-271"/>
+    <property name="user.name" value="user"/>
+    <property name="path.separator" value=";"/>
+    <property name="gatling.skip" value="true"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1250"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="localRepository" value="C:\Users\user\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\user\AppData\Local\Temp\"/>
+    <property name="java.version" value="11.0.24"/>
+    <property name="user.dir" value="D:\Program Files\API testing\surveyQA\surveyQA\survey_QA"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="D:\Program Files\Java\jdk-11.0.24_windows-x64_bin\jdk-11.0.24\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;$env:JAVA_HOME\bin;D:\Program Files\Java\jdk-11.0.24_windows-x64_bin\jdk-11.0.24\bin;C:\Python312\Scripts\;C:\Python312\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\wooting-analog-sdk\;C:\Users\user\.jdks\openjdk-22.0.1\bin;D:\Program Files\apache-maven-3.9.6\bin;D:\Program Files\Git\cmd;D:\webdrivers;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\user\AppData\Local\Android\Sdk\tools\bin;C:\Users\user\AppData\Local\Android\Sdk\tools;C:\Users\user\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\nodejs\node_modules\npm\bin;C:\Program Files\Docker\Docker\resources\bin;&quot;D:\Program Files\Java\jdk-11.0.24_windows-x64_bin\jdk-11.0.24\bin;&quot;;C:\Users\user\scoop\apps\allure\current\bin;D:\Program Files\Java\jdk-11.0.24_windows-x64_bin\jdk-11.0.24\bin;C:\Python312\Scripts\;C:\Python312\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\wooting-analog-sdk\;C:\Users\user\.jdks\openjdk-22.0.1\bin;D:\Program Files\apache-maven-3.9.6\bin;D:\Program Files\Git\cmd;D:\webdrivers;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\user\AppData\Local\Android\Sdk\tools\bin;C:\Users\user\AppData\Local\Android\Sdk\tools;C:\Users\user\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\nodejs\node_modules\npm\bin;C:\Program Files\Docker\Docker\resources\bin;&quot;D:\Program Files\Java\jdk-11.0.24_windows-x64_bin\jdk-11.0.24\bin;&quot;;D:\Program Files\Allure\bin;D:\Program Files\API testing\surveyQA\surveyQA\survey_QA\src\test\java\resources\tools\allure-cli\bin;C:\Users\user\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\IntelliJ IDEA 2024.1\bin;D:\webdrivers;C:\Users\user\AppData\Local\Programs\Ollama;C:\Users\user\AppData\Roaming\npm;C:\Users\user\scoop\shims;C:\Users\user\scoop\apps\scoop\current\bin;C:\Users\user\scoop\apps\allure\current\bin;;."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.24+7-LTS-271"/>
+    <property name="java.specification.maintenance.version" value="2"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="testValidateMemberSurveyData" classname="tests.integration.SurveysOfMemberTest" time="7.038">
+    <system-out><![CDATA[12:12:49.286 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 5
+12:12:49.359 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 1
+12:12:49.370 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 4
+12:12:49.423 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 7
+12:12:49.432 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 9
+12:12:49.492 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 15
+12:12:49.553 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 2
+12:12:49.564 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 6
+12:12:49.599 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 13
+12:12:49.610 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 11
+12:12:49.614 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 8
+12:12:49.618 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 14
+12:12:49.620 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 12
+12:12:49.633 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 3
+12:12:49.695 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 19
+12:12:49.702 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 17
+12:12:49.717 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 16
+12:12:49.722 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 23
+12:12:49.723 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 10
+12:12:49.759 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 18
+12:12:49.839 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 28
+12:12:49.867 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 26
+12:12:49.879 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 25
+12:12:49.885 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 20
+12:12:49.893 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 22
+12:12:49.922 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 27
+12:12:49.925 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 29
+12:12:49.945 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 31
+12:12:50.017 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 33
+12:12:50.025 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 21
+12:12:50.025 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 24
+12:12:50.053 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 32
+12:12:50.068 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 34
+12:12:50.082 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 30
+12:12:50.090 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 37
+12:12:50.108 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 43
+12:12:50.222 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 35
+12:12:50.238 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 47
+12:12:50.261 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 44
+12:12:50.267 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 39
+12:12:50.327 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 42
+12:12:50.331 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 36
+12:12:50.335 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 38
+12:12:50.339 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 45
+12:12:50.342 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 46
+12:12:50.349 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 40
+12:12:50.372 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 48
+12:12:50.423 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 41
+12:12:50.457 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 55
+12:12:50.467 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 50
+12:12:50.520 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 51
+12:12:50.525 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 52
+12:12:50.541 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 53
+12:12:50.550 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 54
+12:12:50.593 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 57
+12:12:50.626 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 60
+12:12:50.640 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 61
+12:12:50.651 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 56
+12:12:50.674 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 58
+12:12:50.674 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 62
+12:12:50.675 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 49
+12:12:50.686 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 59
+12:12:50.698 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 64
+12:12:50.741 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 66
+12:12:50.773 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 67
+12:12:50.797 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 65
+12:12:50.806 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 75
+12:12:50.838 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 63
+12:12:50.843 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 77
+12:12:50.873 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 70
+12:12:50.882 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 68
+12:12:50.893 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 69
+12:12:50.976 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 72
+12:12:50.994 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 82
+12:12:50.995 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 71
+12:12:51.038 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 74
+12:12:51.072 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 81
+12:12:51.074 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 73
+12:12:51.121 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 76
+12:12:51.126 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 78
+12:12:51.136 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 83
+12:12:51.169 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 79
+12:12:51.186 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 89
+12:12:51.240 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 80
+12:12:51.246 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 91
+12:12:51.270 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 90
+12:12:51.331 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 96
+12:12:51.338 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 87
+12:12:51.346 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 84
+12:12:51.362 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 100
+12:12:51.365 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 94
+12:12:51.394 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 88
+12:12:51.414 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 86
+12:12:51.417 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 93
+12:12:51.432 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 85
+12:12:51.458 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 92
+12:12:51.508 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 98
+12:12:51.525 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 97
+12:12:51.529 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 95
+12:12:51.538 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 109
+12:12:51.552 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 99
+12:12:51.558 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 101
+12:12:51.724 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 104
+12:12:51.730 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 107
+12:12:51.741 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 106
+12:12:51.751 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 102
+12:12:51.761 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 105
+12:12:51.799 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 113
+12:12:51.812 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 103
+12:12:51.812 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 110
+12:12:51.814 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 111
+12:12:51.826 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 116
+12:12:51.841 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 115
+12:12:51.853 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 114
+12:12:51.855 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 108
+12:12:51.864 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 112
+12:12:51.914 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 122
+12:12:51.949 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 121
+12:12:51.974 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 117
+12:12:52.000 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 125
+12:12:52.032 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 127
+12:12:52.043 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 123
+12:12:52.060 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 118
+12:12:52.122 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 124
+12:12:52.141 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 132
+12:12:52.152 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 126
+12:12:52.186 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 130
+12:12:52.188 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 120
+12:12:52.189 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 119
+12:12:52.206 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 128
+12:12:52.253 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 135
+12:12:52.256 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 129
+12:12:52.260 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 131
+12:12:52.273 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 134
+12:12:52.281 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 136
+12:12:52.317 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 142
+12:12:52.350 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 143
+12:12:52.365 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 137
+12:12:52.501 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 133
+12:12:52.510 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 139
+12:12:52.512 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 141
+12:12:52.541 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 138
+12:12:52.586 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 144
+12:12:52.592 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 140
+12:12:52.674 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 147
+12:12:52.688 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 145
+12:12:52.690 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 159
+12:12:52.704 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 150
+12:12:52.721 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 148
+12:12:52.727 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 151
+12:12:52.729 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 146
+12:12:52.769 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 153
+12:12:52.775 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 152
+12:12:52.798 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 149
+12:12:52.813 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 157
+12:12:52.819 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 154
+12:12:52.852 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 156
+12:12:52.927 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 155
+12:12:52.947 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 163
+12:12:52.959 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 164
+12:12:52.962 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 166
+12:12:53.009 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 160
+12:12:53.016 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 168
+12:12:53.017 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 165
+12:12:53.024 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 161
+12:12:53.029 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 169
+12:12:53.086 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 172
+12:12:53.101 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 162
+12:12:53.120 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 174
+12:12:53.125 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 158
+12:12:53.158 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 170
+12:12:53.275 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 167
+12:12:53.285 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 176
+12:12:53.287 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 171
+12:12:53.299 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 181
+12:12:53.339 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 175
+12:12:53.388 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 173
+12:12:53.445 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 183
+12:12:53.453 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 177
+12:12:53.455 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 180
+12:12:53.472 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 190
+12:12:53.501 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 182
+12:12:53.518 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 178
+12:12:53.518 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 189
+12:12:53.527 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 179
+12:12:53.528 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 184
+12:12:53.558 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 191
+12:12:53.579 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 186
+12:12:53.605 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 185
+12:12:53.611 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 188
+12:12:53.618 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 187
+12:12:53.713 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 196
+12:12:53.777 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 200
+12:12:53.816 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 193
+12:12:53.817 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 194
+12:12:53.821 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 203
+12:12:53.830 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 195
+12:12:53.844 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 199
+12:12:53.845 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 204
+12:12:53.871 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 192
+12:12:53.893 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 198
+12:12:53.904 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 207
+12:12:53.908 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 202
+12:12:53.929 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 201
+12:12:54.069 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 208
+12:12:54.103 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 206
+12:12:54.122 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 205
+12:12:54.131 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 209
+12:12:54.154 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 211
+12:12:54.169 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 197
+12:12:54.192 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 216
+12:12:54.222 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 214
+12:12:54.241 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 212
+12:12:54.297 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 215
+12:12:54.326 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 217
+12:12:54.360 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 221
+12:12:54.364 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 210
+12:12:54.391 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 218
+12:12:54.392 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 213
+12:12:54.400 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 220
+12:12:54.411 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 219
+12:12:54.413 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 222
+12:12:54.416 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 223
+12:12:54.440 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 224
+12:12:54.534 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 228
+12:12:54.542 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 225
+12:12:54.568 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 238
+12:12:54.575 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 226
+12:12:54.580 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 231
+12:12:54.638 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 237
+12:12:54.641 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 236
+12:12:54.682 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 227
+12:12:54.687 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 233
+12:12:54.688 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 229
+12:12:54.830 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 234
+12:12:54.854 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 232
+12:12:54.858 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 235
+12:12:54.886 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 230
+12:12:54.934 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 240
+12:12:54.947 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 239
+12:12:54.947 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 242
+12:12:54.949 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 245
+12:12:54.961 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 241
+12:12:54.963 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 247
+12:12:55.013 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 246
+12:12:55.050 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 252
+12:12:55.050 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 243
+12:12:55.053 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 244
+12:12:55.060 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 249
+12:12:55.144 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 248
+12:12:55.149 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 253
+12:12:55.168 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 256
+12:12:55.176 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 250
+12:12:55.177 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 258
+12:12:55.215 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 251
+12:12:55.218 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 260
+12:12:55.245 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 257
+12:12:55.263 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 259
+12:12:55.302 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 254
+12:12:55.364 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 261
+12:12:55.366 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 255
+12:12:55.380 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 269
+12:12:55.388 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 268
+12:12:55.400 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 262
+12:12:55.412 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 263
+12:12:55.413 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 266
+12:12:55.432 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 267
+12:12:55.464 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 273
+12:12:55.593 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 265
+12:12:55.648 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 264
+12:12:55.650 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 279
+12:12:55.670 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 280
+12:12:55.713 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 271
+12:12:55.732 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 274
+12:12:55.742 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 272
+12:12:55.750 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 270
+12:12:55.752 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 275
+12:12:55.755 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 277
+12:12:55.784 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 281
+12:12:55.823 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 276
+12:12:55.835 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 278
+12:12:55.904 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 285
+12:12:55.912 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 282
+12:12:55.949 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 288
+12:12:55.950 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 287
+12:12:55.962 [ForkJoinPool.commonPool-worker-3] INFO api.SurveysOfMemberApi - Validation successful for Member ID 284
+12:12:56.020 [ForkJoinPool.commonPool-worker-29] INFO api.SurveysOfMemberApi - Validation successful for Member ID 283
+12:12:56.040 [ForkJoinPool.commonPool-worker-9] INFO api.SurveysOfMemberApi - Validation successful for Member ID 286
+12:12:56.043 [ForkJoinPool.commonPool-worker-19] INFO api.SurveysOfMemberApi - Validation successful for Member ID 294
+12:12:56.059 [ForkJoinPool.commonPool-worker-11] INFO api.SurveysOfMemberApi - Validation successful for Member ID 295
+12:12:56.062 [ForkJoinPool.commonPool-worker-5] INFO api.SurveysOfMemberApi - Validation successful for Member ID 299
+12:12:56.067 [ForkJoinPool.commonPool-worker-7] INFO api.SurveysOfMemberApi - Validation successful for Member ID 292
+12:12:56.071 [ForkJoinPool.commonPool-worker-23] INFO api.SurveysOfMemberApi - Validation successful for Member ID 298
+12:12:56.073 [ForkJoinPool.commonPool-worker-15] INFO api.SurveysOfMemberApi - Validation successful for Member ID 290
+12:12:56.083 [ForkJoinPool.commonPool-worker-21] INFO api.SurveysOfMemberApi - Validation successful for Member ID 289
+12:12:56.084 [ForkJoinPool.commonPool-worker-25] INFO api.SurveysOfMemberApi - Validation successful for Member ID 300
+12:12:56.089 [ForkJoinPool.commonPool-worker-17] INFO api.SurveysOfMemberApi - Validation successful for Member ID 293
+12:12:56.107 [ForkJoinPool.commonPool-worker-13] INFO api.SurveysOfMemberApi - Validation successful for Member ID 291
+12:12:56.120 [ForkJoinPool.commonPool-worker-27] INFO api.SurveysOfMemberApi - Validation successful for Member ID 296
+12:12:56.130 [ForkJoinPool.commonPool-worker-31] INFO api.SurveysOfMemberApi - Validation successful for Member ID 297
+]]></system-out>
+  </testcase>
+</testsuite>

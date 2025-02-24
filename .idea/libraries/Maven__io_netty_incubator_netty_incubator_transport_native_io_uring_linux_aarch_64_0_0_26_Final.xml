@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: io.netty.incubator:netty-incubator-transport-native-io_uring:linux-aarch_64:0.0.26.Final" type="java-imported" external-system-id="Maven">
+    <properties groupId="io.netty.incubator" artifactId="netty-incubator-transport-native-io_uring" version="0.0.26.Final" classifier="linux-aarch_64" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/netty/incubator/netty-incubator-transport-native-io_uring/0.0.26.Final/netty-incubator-transport-native-io_uring-0.0.26.Final-linux-aarch_64.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/io/netty/incubator/netty-incubator-transport-native-io_uring/0.0.26.Final/netty-incubator-transport-native-io_uring-0.0.26.Final-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/netty/incubator/netty-incubator-transport-native-io_uring/0.0.26.Final/netty-incubator-transport-native-io_uring-0.0.26.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

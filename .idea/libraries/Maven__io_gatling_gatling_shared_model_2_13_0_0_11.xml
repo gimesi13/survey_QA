@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: io.gatling:gatling-shared-model_2.13:0.0.11" type="java-imported" external-system-id="Maven">
+    <properties groupId="io.gatling" artifactId="gatling-shared-model_2.13" version="0.0.11" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/gatling/gatling-shared-model_2.13/0.0.11/gatling-shared-model_2.13-0.0.11.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/io/gatling/gatling-shared-model_2.13/0.0.11/gatling-shared-model_2.13-0.0.11-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/gatling/gatling-shared-model_2.13/0.0.11/gatling-shared-model_2.13-0.0.11-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
