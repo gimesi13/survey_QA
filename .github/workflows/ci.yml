@@ -107,5 +107,5 @@ jobs:
               issue_number: context.issue.number,
               owner: repo.owner,
               repo: repo.repo,
-              body: ✅ **Allure Report for Run #${runId}:** [View Report](${reportUrl})
+              body: `✅ **Allure Report for Run #${runId}:** [View Report](${reportUrl})`
             });
