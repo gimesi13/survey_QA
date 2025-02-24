@@ -32,17 +32,14 @@ jobs:
       - name: Run Gatling Load Test
         run: mvn gatling:test -Dgatling.simulationClass=tests.performance.LoadTest -Dgatling.skip=false
 
-      # Cleanup Old Gatling Reports (Keep Last 10)
       - name: Cleanup Old Reports (Keep Last 10)
         run: |
           git fetch --depth=1 origin allure-reports
           git checkout allure-reports
 
-        # Ensure the loadtest-reports directory exists
           mkdir -p loadtest-reports
           cd loadtest-reports
 
-        # Remove old reports, but only if there are more than 10
           if [ $(ls -d */ 2>/dev/null | wc -l) -gt 10 ]; then
             ls -d */ | sort -r | tail -n +11 | xargs rm -rf
           else
@@ -55,11 +52,9 @@ jobs:
           git push origin allure-reports
 
 
-      # Verify Gatling Report Exists
       - name: Verify Gatling Report Exists
         run: ls -R target/gatling
 
-      # Get Latest Report Directory
       - name: Get Latest Gatling Report Directory
         run: |
           REPORT_DIR=$(ls -d target/gatling/loadtest-* 2>/dev/null | tail -n 1)
@@ -71,7 +66,6 @@ jobs:
           echo "REPORT_DIR=$REPORT_DIR" >> $GITHUB_ENV
           echo "RUN_ID=$RUN_ID" >> $GITHUB_ENV
 
-      # Deploy Gatling Report to GitHub Pages (Inside loadtest-reports/<run-id>/)
       - name: Deploy Gatling Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -82,7 +76,6 @@ jobs:
           keep_files: true
           commit_message: "Deploy Gatling Load Test Report [skip ci]"
 
-      # Get Load Test Report URL
       - name: Get Load Test Report URL
         run: echo "url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/loadtest-reports/${{ env.RUN_ID }}/index.html" >> $GITHUB_ENV
 

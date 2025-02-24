@@ -64,17 +64,14 @@ jobs:
           allure generate --single-file target/allure-results --clean -o target/allure-report/$REPORT_DIR --clean
           echo "REPORT_DIR=$REPORT_DIR" >> $GITHUB_ENV 
 
-      # Cleanup Old Allure Reports (Keep Last 10)
       - name: Cleanup Old Reports (Keep Last 10)
         run: |
           git fetch --depth=1 origin allure-reports
           git checkout allure-reports
 
-       # Ensure the allure-reports directory exists
           mkdir -p allure-reports
           cd allure-reports
 
-        # Remove old reports, but only if there are more than 10
           if [ $(ls -d */ 2>/dev/null | wc -l) -gt 10 ]; then
             ls -d */ | sort -r | tail -n +11 | xargs rm -rf
           else
@@ -86,8 +83,6 @@ jobs:
           git commit -m "Cleanup old Allure reports [skip ci]" || exit 0
           git push origin allure-reports
 
-
-      # Deploy Allure Report to GitHub Pages
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
