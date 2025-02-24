@@ -122,4 +122,3 @@ jobs:
               repo: repo.repo,
               body: `✅ **Allure Report for Run #${runId}:** [View Report](${reportUrl})`
             });
-
