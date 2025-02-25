@@ -18,7 +18,7 @@ public class MembersOfSurveyApi extends BaseApi {
     private static final String MEMBERS_CSV_PATH = "src/test/java/resources/csv/Members.csv";
 
     // Validate members of surveys for a given status
-    public void validateSurveyMembersForStatus(String status) {
+    public void validateSurveyMembersForStatus(String status, int lastSurveyId, int step) {
         logger.info("Starting validation for status: {}", status);
 
         // Fetch the participation and member data from CSV
@@ -35,7 +35,7 @@ public class MembersOfSurveyApi extends BaseApi {
         // Create CompletableFutures for each Survey ID
         List<CompletableFuture<Void>> futures = new ArrayList<>();
 
-        for (int surveyId = 1; surveyId <= 100; surveyId++) {
+        for (int surveyId = 1; surveyId <= lastSurveyId; surveyId += step) {
             final int finalSurveyId = surveyId;
 
             CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {

@@ -17,7 +17,7 @@ public class SurveyPointsApi extends BaseApi {
     private static final String SURVEYS_CSV_PATH = "src/test/java/resources/csv/Surveys.csv";
     private static final String PARTICIPATION_CSV_PATH = "src/test/java/resources/csv/Participation.csv";
 
-    public void testSurveyPoints(String csvFieldName) {
+    public void testSurveyPoints(String csvFieldName, int finalMemberId, int step) {
         logger.info("Starting validation for status: {}", csvFieldName);
         String jsonPathKey = "";
         switch (csvFieldName) {
@@ -48,7 +48,7 @@ public class SurveyPointsApi extends BaseApi {
                 .collect(Collectors.toList());
 
         // Iterate through all members (1 to 300)
-        for (int memberId = 1; memberId <= 300; memberId++) {
+        for (int memberId = 1; memberId <= finalMemberId; memberId += step) {
             Response response = ApiCallHelper.get("/members/" + memberId + "/points");
             List<String> actualValues = response.jsonPath().getList("survey." + jsonPathKey, String.class);
 
@@ -70,7 +70,7 @@ public class SurveyPointsApi extends BaseApi {
         }
     }
 
-    public void validatePoints() {
+    public void validatePoints(int lastMemberId, int step) {
         // Read Surveys.csv and Participation.csv
         List<CSVRecord> surveyRecords = CsvHelper.readCsv(SURVEYS_CSV_PATH);
         List<CSVRecord> participationRecords = CsvHelper.readCsv(PARTICIPATION_CSV_PATH);
@@ -89,7 +89,7 @@ public class SurveyPointsApi extends BaseApi {
                 ));
 
         // Iterate through all members (1 to 300)
-        for (int memberId = 1; memberId <= 300; memberId++) {
+        for (int memberId = 1; memberId <= lastMemberId; memberId += step) {
             // Filter participation records for the current member
             int finalMemberId = memberId;
             List<CSVRecord> memberParticipations = participationRecords.stream()

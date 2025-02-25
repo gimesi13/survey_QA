@@ -15,31 +15,34 @@ import org.junit.jupiter.api.extension.ExtendWith;
 @DisplayName("Integration - Available Members")
 public class AvailableMembersTest extends AvailableMembersApi {
 
+    private static final int FINAL_SURVEY_ID = 100;
+    private static final int STEP = 3;
+
     @Test
     @DisplayName("Verify Available Member IDs")
     @Description("Verifies the available member IDs in the response")
     void testAvailableIds() {
-        validateAvailableMembers("id");
+        validateAvailableMembers("id", FINAL_SURVEY_ID, STEP);
     }
 
     @Test
     @DisplayName("Verify Available Member Names")
     @Description("Verifies the available member names in the response")
     void testAvailableNames() {
-        validateAvailableMembers("name");
+        validateAvailableMembers("name", FINAL_SURVEY_ID, STEP);
     }
 
     @Test
     @DisplayName("Verify Available Member Emails")
     @Description("Verifies the available member emails in the response")
     void testAvailableEmails() {
-        validateAvailableMembers("email");
+        validateAvailableMembers("email", FINAL_SURVEY_ID, STEP);
     }
 
     @Test
     @DisplayName("Verify Available Member Statuses")
     @Description("Verifies the available member statuses in the response")
     void testAvailableStatuses() {
-        validateAvailableMembers("status");
+        validateAvailableMembers("status", FINAL_SURVEY_ID, STEP);
     }
 }

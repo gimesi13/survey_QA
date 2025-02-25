@@ -17,10 +17,10 @@ public class AvailableMembersApi extends BaseApi {
     private static final String PARTICIPATION_CSV_PATH = "src/test/java/resources/csv/Participation.csv";
 
     // Validate available members for the given attribute (id, name, email, or status)
-    public void validateAvailableMembers(String attribute) {
+    public void validateAvailableMembers(String attribute, int finalSurveyId, int step) {
         logger.info("Starting validation for attribute: {}", attribute);
 
-        for (int surveyId = 1; surveyId <= 100; surveyId++) {
+        for (int surveyId = 1; surveyId <= finalSurveyId; surveyId+= step) {
             String surveyIdStr = String.valueOf(surveyId);
             List<String> availableData = fetchAvailableData(attribute, surveyIdStr);
 

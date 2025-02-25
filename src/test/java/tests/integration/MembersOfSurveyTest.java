@@ -15,31 +15,34 @@ import api.MembersOfSurveyApi;
 @DisplayName("Integration - Members of Survey")
 public class MembersOfSurveyTest extends MembersOfSurveyApi {
 
+    private static final int FINAL_SURVEY_ID = 100;
+    private static final int STEP = 3;
+
     @Test
     @DisplayName("Verify Members with NOT_ASKED Status")
     @Description("Validates the members with NOT_ASKED status in the survey")
     void testSurveyMembersForNotAskedStatus() {
-        validateSurveyMembersForStatus("NOT_ASKED");
+        validateSurveyMembersForStatus("NOT_ASKED",FINAL_SURVEY_ID, STEP);
     }
 
     @Test
     @DisplayName("Verify Members with REJECTED Status")
     @Description("Validates the members with REJECTED status in the survey")
     void testSurveyMembersForRejectedStatus() {
-        validateSurveyMembersForStatus("REJECTED");
+        validateSurveyMembersForStatus("REJECTED",FINAL_SURVEY_ID, STEP);
     }
 
     @Test
     @DisplayName("Verify Members with FILTERED Status")
     @Description("Validates the members with FILTERED status in the survey")
     void testSurveyMembersForFilteredStatus() {
-        validateSurveyMembersForStatus("FILTERED");
+        validateSurveyMembersForStatus("FILTERED",FINAL_SURVEY_ID, STEP);
     }
 
     @Test
     @DisplayName("Verify Members with COMPLETED Status")
     @Description("Validates the members with COMPLETED status in the survey")
     void testSurveyMembersForCompletedStatus() {
-        validateSurveyMembersForStatus("COMPLETED");
+        validateSurveyMembersForStatus("COMPLETED",FINAL_SURVEY_ID, STEP);
     }
 }

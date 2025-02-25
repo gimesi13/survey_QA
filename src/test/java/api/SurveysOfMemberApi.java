@@ -1,5 +1,6 @@
 package api;
 
+import io.qameta.allure.Allure;
 import io.restassured.response.Response;
 import org.apache.commons.csv.CSVRecord;
 import org.slf4j.Logger;
@@ -19,6 +20,8 @@ public class SurveysOfMemberApi extends BaseApi {
 
     // Validate that the member data matches participation and survey information
     public void validateMemberSurveyData() {
+        Allure.step("Validating that the member data matches participation and survey information");
+
         List<CSVRecord> participationRecords = CsvHelper.readCsv(PARTICIPATION_CSV_PATH);
         List<CSVRecord> surveyRecords = CsvHelper.readCsv(SURVEYS_CSV_PATH);
 
@@ -49,7 +52,6 @@ public class SurveysOfMemberApi extends BaseApi {
                         // Validate that the survey values in the response match those in Surveys.csv
                         validateSurveyValues(memberId, response, surveyRecords);
 
-                        logger.info("Validation successful for Member ID {}", memberId);
                     } catch (Exception e) {
                         throw new RuntimeException("Validation failed for Member ID " + memberId, e);
                     }
